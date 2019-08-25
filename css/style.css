@@ -14,6 +14,8 @@ a {
 }
 img{
     object-fit: contain;
+    width: 100%;
+    height: 100%;
 }
 
 /* start navbar */
@@ -33,9 +35,9 @@ img{
 .navbar ul li{
     margin-left: 3em;
 }
-.navbar ul button{
+.navbar ul button,.section_1-left button{
     color: #ffffff;
-    background: #000;
+    background: rgba(24, 127, 192, 71);
     height: 40px;
     width: 120px;
     border: none;
@@ -45,4 +47,37 @@ img{
 }
 
 /* end of navbar */
+.section_1{
+display: flex;
+justify-content: space-between;
+/* width: 100vw; */
+padding: 3em;
+background-color: #ffffff
+}
+.section_1-left{
+width: 50%;
+justify-items: center
+}
+.section_1-left-header{
+    font-size: 40px;
+    margin-bottom: 1em;
+    text-align: center;
+}
+.section_1-left-text{
+    padding-right: 2em;
+}
+.section_1-left button{
+    /* background-color: blue */
+    margin-top: 4em;
+    margin-left: 18em 
+    /* align-self: center */
+}
+.section_1-right{
+    width: 50%;
+}
+.section_1-right-img{
+    /* width: 400px; */
+    padding-right: 2em;
+}
+
 
