@@ -80,4 +80,16 @@ justify-items: center
     padding-right: 2em;
 }
 
+/* end of section 1 */
 
+.section_2{
+    text-align: center;
+    margin-top: 2em;
+    font-size: 40px;
+}
+.line{
+    width: 200px;
+    height: 8px;
+    margin: auto;
+    background: rgba(24, 127, 192, 71);
+}
