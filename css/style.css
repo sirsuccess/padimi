@@ -164,3 +164,46 @@ justify-items: center
     justify-content: space-around;
     padding: 2em;
 }
+/* end of product section */
+.footer-section{
+    background-image: url("img/Vector.svg");
+    background-repeat: no-repeat
+}
+.subscribe{
+    text-align: center;
+    font-size: 40px;
+    padding-top: 2em;
+}
+.inputText{
+width: 500px;
+border-radius: 20px;
+height: 50px;
+border: 2px solid black;
+padding-left: 1em;
+}
+.envelop{
+    background-color: green;
+    width: 250px;
+    color: #ffffff;
+    margin: auto;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0em 0.5em;
+    font-size: 40px;
+    margin-top: 0.5em;
+}
+#submit{
+    border: none;
+    border-radius: 10px;
+    background-color: green;
+    color: #ffffff;
+    font-size: 40px;
+}
+
+
+footer{
+    display: flex;
+    justify-content: space-evenly
+}
