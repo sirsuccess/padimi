@@ -166,8 +166,8 @@ justify-items: center
 }
 /* end of product section */
 .footer-section{
-    background-image: url("img/Vector.svg");
-    background-repeat: no-repeat
+    background-image:url("img/Vector.svg");
+    
 }
 .subscribe{
     text-align: center;
@@ -182,7 +182,7 @@ border: 2px solid black;
 padding-left: 1em;
 }
 .envelop{
-    background-color: green;
+    background-color: rgb(4, 167, 4);
     width: 250px;
     color: #ffffff;
     margin: auto;
@@ -197,7 +197,7 @@ padding-left: 1em;
 #submit{
     border: none;
     border-radius: 10px;
-    background-color: green;
+    background-color: rgb(4, 167, 4);
     color: #ffffff;
     font-size: 40px;
 }
@@ -205,5 +205,15 @@ padding-left: 1em;
 
 footer{
     display: flex;
-    justify-content: space-evenly
+    justify-content: space-evenly;
+    font-size: 18px;
+    margin-top: 8em;
+
+}
+.footer-column-header{
+    font-size: 25px;
+    margin-bottom: 0.8em;
+}
+.footer-column ul li{
+    margin-bottom: 1em;
 }
