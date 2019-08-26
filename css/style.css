@@ -154,3 +154,13 @@ justify-items: center
 .section_5-right p{
     margin-bottom: 1em;
 }
+
+/* end of section 5 */
+.partner-section{
+    background-color: #ffffff;
+}
+.first-line{
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+}
