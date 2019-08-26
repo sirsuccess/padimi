@@ -130,3 +130,27 @@ justify-items: center
     border-radius: 12px;
     margin-top: 2em;
 }
+/* <!-- end of section 3 --> */
+.next-line{
+    width: 250px;
+    margin-bottom: 0.5em; 
+}
+/* <!-- end of section 4 --> */
+.section_5{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 2em;
+    background-color: #ffffff;
+    font-size: 25px
+}
+.section_5-left{
+    width: 50%;
+}
+
+.section_5-right{
+    width: 50%;
+}
+.section_5-right p{
+    margin-bottom: 1em;
+}
