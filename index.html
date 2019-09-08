@@ -1,114 +1,375 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>pdimi</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <title>Shaga App</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="" name="keywords">
+  <meta content="" name="description">
+
+  <!-- Favicons -->
+  <link href="img/favicon.ico" rel="icon">
+  <link href="img/favicon.ico" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i|Montserrat:300,400,500,700" rel="stylesheet">
+
+  <!-- Bootstrap CSS File -->
+  <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Libraries CSS Files -->
+  <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/ionicons/css/ionicons.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+  <!-- Main Stylesheet File -->
+  <link href="css/style.css" rel="stylesheet">
+
 </head>
 
+
 <body>
-    <div class="navbar">
-        <div class="nav-left">
-            <div class="logo-img">
-                <img src="img/logo.svg" alt="">
+
+  <!--==========================
+    Header
+  ============================-->
+  <header id="header">
+    <div class="container-fluid">
+
+      <div id="logo" class="pull-left">
+        <a href="#intro"><img src="img/logo.svg" alt="" title=""/></a>
+      </div>
+
+      <nav id="nav-menu-container">
+        <ul class="nav-menu">
+          <li class="menu-active"><a href="#intro">Home</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="./login.html">Log in</a></li>
+          <li><a  href="./signup.html">Sign up</a></li>
+        </ul>
+      </nav><!-- #nav-menu-container -->
+    </div>
+  </header><!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+  <section id="intro">
+    <div class="intro-container">
+      <div id="introCarousel" class="carousel  slide carousel-fade" data-ride="carousel">
+
+        <ol class="carousel-indicators"></ol>
+
+        <div class="carousel-inner" role="listbox">
+
+          <div class="carousel-item active">
+            <div class="carousel-background"><img src="img/intro-carousel/1.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>MAKE NIGERIA BETTER AGIAN</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                <a href="#" class="btn-get-started scrollto">Get Started</a>
+              </div>
             </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="img/intro-carousel/2.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>GET THE GOVERNMENT TO DO THEIR JOB</h2>
+                <p>Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut.</p>
+                <a href="#" class="btn-get-started scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="carousel-background"><img src="img/intro-carousel/3.jpg" alt=""></div>
+            <div class="carousel-container">
+              <div class="carousel-content">
+                <h2>PARTICIPATE IN GOVERNMENT ACTIVITIES</h2>
+                <p>Beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt omnis iste natus error sit voluptatem accusantium.</p>
+                <a href="#" class="btn-get-started scrollto">Get Started</a>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="nav-right">
+
+        <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon ion-chevron-left" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+
+        <a class="carousel-control-next" href="#introCarousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon ion-chevron-right" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+
+      </div>
+    </div>
+  </section><!-- #intro -->
+
+  <main id="main">
+
+    <!--==========================
+      About Us Section
+    ============================-->
+    <section id="about">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>About Us</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </header>
+
+        <div class="row about-cols">
+
+          <div class="col-md-4 wow fadeInUp">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-mission.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Mission</a></h2>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur elit, sed do eiusmod tempor ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-plan.gif" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-list-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Plan</a></h2>
+              <p>
+                Sed ut perspiciatis unde omnis iste natus error sit voluptatem  doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+              </p>
+            </div>
+          </div>
+
+          <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div class="about-col">
+              <div class="img">
+                <img src="img/about-vision.jpg" alt="" class="img-fluid">
+                <div class="icon"><i class="ion-ios-eye-outline"></i></div>
+              </div>
+              <h2 class="title"><a href="#">Our Vision</a></h2>
+              <p>
+                Nemo enim ipsam voluptatem quia voluptas sit aut odit aut fugit, sed quia magni dolores eos qui ratione voluptatem sequi nesciunt Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.
+              </p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #about -->
+
+    <!--==========================
+      Services Section
+    ============================-->
+    <section id="services">
+      <div class="container">
+
+        <header class="section-header wow fadeInUp">
+          <h3>Services</h3>
+          <p>Laudem latine persequeris id sed, ex fabulas delectus quo. No vel partiendo abhorreant vituperatoribus, ad pro quaestio laboramus. Ei ubique vivendum pro. At ius nisl accusam lorenta zanos paradigno tridexa panatarel.</p>
+        </header>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-analytics-outline"></i></div>
+            <h4 class="title"><a href="">Lorem Ipsum</a></h4>
+            <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-bookmarks-outline"></i></div>
+            <h4 class="title"><a href="">Dolor Sitema</a></h4>
+            <p class="description">Minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat tarad limino ata</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-paper-outline"></i></div>
+            <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
+            <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-speedometer-outline"></i></div>
+            <h4 class="title"><a href="">Magni Dolores</a></h4>
+            <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-barcode-outline"></i></div>
+            <h4 class="title"><a href="">Nemo Enim</a></h4>
+            <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque</p>
+          </div>
+          <div class="col-lg-4 col-md-6 box wow bounceInUp" data-wow-delay="0.1s" data-wow-duration="1.4s">
+            <div class="icon"><i class="ion-ios-people-outline"></i></div>
+            <h4 class="title"><a href="">Eiusmod Tempor</a></h4>
+            <p class="description">Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #services -->
+
+    <!--==========================
+      Clients Section
+    ============================-->
+    <section id="testimonials" class="section-bg wow fadeInUp">
+      <div class="container">
+
+        <header class="section-header">
+          <h3>Quotes</h3>
+        </header>
+
+        <div class="owl-carousel testimonials-carousel">
+
+          <div class="testimonial-item">
+            <img src="img/testimonial-1.jpg" class="testimonial-img" alt="">
+            <h3>Obafemi Awolowo</h3>
+            <p>
+              <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+              Those of us placed in a position of leadership must be prepared to grasp the nettle if we unite in 
+              doing so, and if, in addition, we set a worthy example and a marat on pace in probity, 
+              unselfishness, and self-sacrifice, the people will follow, all too readily, in our footsteps.
+              <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="img/testimonial-2.jpg" class="testimonial-img" alt="">
+            <h3>Wole Soyinka</h3>
+            <p>
+              <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+              The greatest threat to freedom is the absence of criticism.
+              The man dies in all who keep silent in the face of tyranny.
+              The hand that dips into the bottom of the pot will eat the biggest snail.
+              <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="img/testimonial-3.jpg" class="testimonial-img" alt="">
+            <h3>Ahmadu Bello</h3>
+            <p>
+              <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+              The new nation called Nigeria should be an estate of our great-grandfather, Uthman Dan Fodio. We must ruthlessly prevent a change of power. We use the minorities of the North as willing tools and the South as a
+               conquered territory and never allow them to rule over us, and never allow them to have control over their future.
+              <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="img/testimonial-4.jpg" class="testimonial-img" alt="">
+            <h3>Oby Ezekwesili</h3>
+            <p>
+              <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+              I would like to see a lot of people more involved in practical solutions to practical problems. Women have got to the point where we can turn the world upside down.
+              <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+          <div class="testimonial-item">
+            <img src="img/testimonial-5.jpg" class="testimonial-img" alt="">
+            <h3>Goodluck Jonathan</h3>
+            <p>
+              <img src="img/quote-sign-left.png" class="quote-sign-left" alt="">
+              My political ambition is not worth the blood of any Nigerian.
+              <img src="img/quote-sign-right.png" class="quote-sign-right" alt="">
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- #testimonials -->
+
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 footer-info">
+            <h3>Shaga App</h3>
+            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus. Scelerisque felis imperdiet proin fermentum leo. Amet volutpat consequat mauris nunc congue.</p>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Useful Links</h4>
             <ul>
-                <li><a href="#"> Products</a></li>
-                <li><a href="#">About Us</a> </li>
-                <li><a href="#">Contacts</a> </li>
-                <li><a href="#">Login</a> </li>
-                <a href="home"><button>Get Stated</button></a>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Home</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">About us</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Services</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="ion-ios-arrow-right"></i> <a href="#">Privacy policy</a></li>
             </ul>
-        </div>
-    </div>
-    <!-- end of navbar -->
-    <div class="section_1">
-        <div class="section_1-left">
-            <div class="section_1-left-header">
-                Who We Are
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h4>Contact Us</h4>
+            <p>
+              Atlantics Lekki <br>
+              Lagos, NG 535022<br>
+              NIGERIA <br>
+              <strong>Phone:</strong> +234------<br>
+              <strong>Email:</strong> info@shaga.com<br>
+            </p>
+
+            <div class="social-links">
+              <a href="#" class="twitter"><i class="fa fa-twitter"></i></a>
+              <a href="#" class="facebook"><i class="fa fa-facebook"></i></a>
+              <a href="#" class="instagram"><i class="fa fa-instagram"></i></a>
+              <a href="#" class="google-plus"><i class="fa fa-google-plus"></i></a>
+              <a href="#" class="linkedin"><i class="fa fa-linkedin"></i></a>
             </div>
-            <div class="section_1-left-text">
-                We're constantly looking for ways to make our lives easier, and Padimi is the App that nails it. Since
-                2019, people all over the world ahve benefited from our easy-to-use App. it's been changing lives then
-                ever before - giving users the chance to explore the range of financial, healthcare and insurance
-                options at their disposal
-            </div>
-            <button>Get Stated</button>
-        </div>
-        <div class="section_1-right">
-            <div class="section_1-right-img">
-                <img src="img/card.svg" alt="">
-            </div>
-        </div>
-    </div>
-    <!-- end of section 1 -->
-    <div class="section_2">
-        Products
-        <div class="line"></div>
-    </div>
-    <!-- end of section 2 -->
-    <div class="section_3">
-        <div class="section_3-card">
-            <div class="section_3-card-header">
-                <div class="section_3-img">
-                    <img src="img/money-bag.svg" alt="">
-                </div>
-                <div class="section_3-card-header-text">
-                    FINANCE
-                </div>
-            </div>
-            <div class="section_3-card-text">
-                We always say we're going to make a difference, but are you really ready to change your life for better?
-                if so, we've got just the thing you've been missing. padimi allows users to enjoy a wide range of
-                options with one innovative solution. this feature makes the use of our App easier then any App you've
-                ever used before. Simply dowload Padimi now and start using it right away.
-            </div>
-            <button>Learn More ></button>
+
+          </div>
 
         </div>
-        <div class="section_3-card">
-            <div class="section_3-card-header">
-                <div class="section_3-img">
-                    <img src="img/medical-insurance.svg" alt="">
-                </div>
-                <div class="section_3-card-header-text">
-                    HEALTH
-                </div>
-            </div>
-            <div class="section_3-card-text">
-                We always say we're going to make a difference, but are you really ready to change your life for better?
-                if so, we've got just the thing you've been missing. padimi allows users to enjoy a wide range of
-                options with one innovative solution. this feature makes the use of our App easier then any App you've
-                ever used before. Simply dowload Padimi now and start using it right away.
-            </div>
-            <button>Learn More ></button>
-
-        </div>
-        <div class="section_3-card">
-            <div class="section_3-card-header">
-                <div class="section_3-img">
-                    <img src="img/money-bag.svg" alt="">
-                </div>
-                <div class="section_3-card-header-text">
-                    INSURANCE
-                </div>
-            </div>
-            <div class="section_3-card-text">
-                We always say we're going to make a difference, but are you really ready to change your life for better?
-                if so, we've got just the thing you've been missing. padimi allows users to enjoy a wide range of
-                options with one innovative solution. this feature makes the use of our App easier then any App you've
-                ever used before. Simply dowload Padimi now and start using it right away.
-            </div>
-            <button>Learn More ></button>
-
-        </div>
+      </div>
     </div>
+
+    
+  </footer><!-- #footer -->
+
+  <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+  <!-- Uncomment below i you want to use a preloader -->
+  <div id="preloader"></div>
+
+  <!-- JavaScript Libraries -->
+  <script src="lib/jquery/jquery.min.js"></script>
+  <script src="lib/jquery/jquery-migrate.min.js"></script>
+  <script src="lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/superfish/hoverIntent.js"></script>
+  <script src="lib/superfish/superfish.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/counterup/counterup.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/isotope/isotope.pkgd.min.js"></script>
+  <script src="lib/lightbox/js/lightbox.min.js"></script>
+  <script src="lib/touchSwipe/jquery.touchSwipe.min.js"></script>
+  <!-- Contact Form JavaScript File -->
+
+  <!-- Template Main Javascript File -->
+  <script src="js/main.js"></script>
+
 </body>
-
 </html>
