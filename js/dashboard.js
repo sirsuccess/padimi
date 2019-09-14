@@ -74,11 +74,17 @@ setActiveNav(navIndex);
 let contentLen = 0;
 contentLen = navs.length < tbls.length ? navs.length : tbls.length;
 
-for (j = 0; j < contentLen; j++) {
+// console.log(navs.length);
+// console.log(tbls.length);
+// console.log(navs.length < tbls.length);
+
+for (j = 0; j <= contentLen; j++) {
+  // console.log(navs[j]);
   navs[j].addEventListener("click", seCurrentNav);
 }
 function seCurrentNav() {
-  for (k = 0; k < contentLen; k++) {
+  for (k = 0; k <= contentLen; k++) {
+    console.log(navs[k].isEqualNode(this));
     if (navs[k].isEqualNode(this)) {
       displayTbl(k);
       setActiveNav(k);

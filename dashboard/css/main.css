@@ -1,79 +1,81 @@
-
-
-
-
 /*//////////////////////////////////////////////////////////////////
 [ FONT ]*/
 
 @font-face {
   font-family: OpenSans-Regular;
-  src: url('../fonts/OpenSans/OpenSans-Regular.ttf'); 
+  src: url("../fonts/OpenSans/OpenSans-Regular.ttf");
 }
-
-
 
 /*//////////////////////////////////////////////////////////////////
 [ RESTYLE TAG ]*/
 
 * {
-	margin: 0px; 
-	padding: 0px; 
-	box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
 }
 
-body, html {
-	height: 100%;
-	font-family: OpenSans-Regular, sans-serif;
+body,
+html {
+  height: 100%;
+  font-family: OpenSans-Regular, sans-serif;
   font-family: arial;
-  min-width:300px;
+  min-width: 300px;
 }
 
-.text-center a{color:#076426c2}
+.text-center a {
+  color: #076426c2;
+}
 
 /*---------------------------------------------*/
 a {
-	font-family: OpenSans-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
-	transition: all 0.4s;
-	-webkit-transition: all 0.4s;
+  font-family: OpenSans-Regular;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
+  transition: all 0.4s;
+  -webkit-transition: all 0.4s;
   -o-transition: all 0.4s;
   -moz-transition: all 0.4s;
 }
 
 a:focus {
-	outline: none !important;
+  outline: none !important;
 }
 
 a:hover {
-	text-decoration: none;
+  text-decoration: none;
 }
 
 /*---------------------------------------------*/
-h1,h2,h3,h4,h5,h6 {
-	margin: 0px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
 }
 
 p {
-	font-family: OpenSans-Regular;
-	font-size: 14px;
-	line-height: 1.7;
-	color: #666666;
-	margin: 0px;
+  font-family: OpenSans-Regular;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #666666;
+  margin: 0px;
 }
 
-ul, li {
-	margin: 0px;
-	list-style-type: none;
+ul,
+li {
+  margin: 0px;
+  list-style-type: none;
 }
-
 
 /*---------------------------------------------*/
 input {
-	outline: none;
-	border: none;
+  outline: none;
+  border: none;
 }
 
 textarea {
@@ -81,33 +83,50 @@ textarea {
   border: none;
 }
 
-textarea:focus, input:focus {
+textarea:focus,
+input:focus {
   border-color: transparent !important;
 }
 
-input::-webkit-input-placeholder { color: #666666;}
-input:-moz-placeholder { color: #666666;}
-input::-moz-placeholder { color: #666666;}
-input:-ms-input-placeholder { color: #666666;}
+input::-webkit-input-placeholder {
+  color: #666666;
+}
+input:-moz-placeholder {
+  color: #666666;
+}
+input::-moz-placeholder {
+  color: #666666;
+}
+input:-ms-input-placeholder {
+  color: #666666;
+}
 
-textarea::-webkit-input-placeholder { color: #666666;}
-textarea:-moz-placeholder { color: #666666;}
-textarea::-moz-placeholder { color: #666666;}
-textarea:-ms-input-placeholder { color: #666666;}
+textarea::-webkit-input-placeholder {
+  color: #666666;
+}
+textarea:-moz-placeholder {
+  color: #666666;
+}
+textarea::-moz-placeholder {
+  color: #666666;
+}
+textarea:-ms-input-placeholder {
+  color: #666666;
+}
 
 /*---------------------------------------------*/
 button {
-	outline: none !important;
-	border: none;
-	background: transparent;
+  outline: none !important;
+  border: none;
+  background: transparent;
 }
 
 button:hover {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 iframe {
-	border: none !important;
+  border: none !important;
 }
 
 /*//////////////////////////////////////////////////////////////////
@@ -116,7 +135,7 @@ iframe {
   font-family: arial;
   font-size: 15px;
   line-height: 1.4;
-  color: #999999;
+  color: #04af76;
 }
 
 .txt2 {
@@ -130,7 +149,6 @@ iframe {
   text-decoration: underline;
 }
 
-
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
 
@@ -140,7 +158,7 @@ iframe {
 }
 
 .container-login100 {
-  width: 100%;  
+  width: 100%;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -151,14 +169,12 @@ iframe {
   justify-content: center;
   align-items: center;
   padding: 15px;
-<<<<<<< HEAD
   background: rgba(108, 196, 112, 0.404);
-=======
-  background: rgba(108, 196, 112, 0.267);
->>>>>>> 7e418dc0395893ee5557bc6b07939b49e1612899
 }
 
-.messagebox{font-size:13px;}
+.messagebox {
+  font-size: 13px;
+}
 
 .wrap-login100 {
   width: 500px;
@@ -170,7 +186,6 @@ iframe {
   -o-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
   -ms-box-shadow: 0 3px 20px 0px rgba(0, 0, 0, 0.1);
 }
-
 
 /*==================================================================
 [ Form ]*/
@@ -185,8 +200,8 @@ iframe {
   color: #03471ac2;
   line-height: 1.2;
   text-align: center;
-  font-size:35px;
-  width:100%x;
+  font-size: 35px;
+  width: 100%x;
   text-transform: uppercase;
 }
 
@@ -197,54 +212,47 @@ iframe {
   width: 100%;
   position: relative;
   border-bottom: 1px solid #478d4533;
-  color:#555;
+  color: #555;
 }
 
 .wrap-input100.rs1 {
   border-top: none;
 }
 
-
 .input100 {
   display: block;
   width: 100%;
   background: transparent;
-  font-family:arial;
+  font-family: arial;
   font-size: 15px;
   color: #555;
   line-height: 1.2;
 }
 
 .category {
-  
   background: transparent;
-  font-family:arial;
+  font-family: arial;
   font-size: 15px;
   color: #555;
   line-height: 1.2;
 }
-
 
 .category {
-  
   background: transparent;
-  font-family:arial;
+  font-family: arial;
   font-size: 15px;
   color: #555;
   line-height: 1.2;
 }
 
-
-.custom-select{
+.custom-select {
   background-color: transparent;
-  margin-top:10px;
-  width:100%;
-  border:0px;
-  color:#aaa;
-  padding-left:0px;
-  ;
+  margin-top: 10px;
+  width: 100%;
+  border: 0px;
+  color: #aaa;
+  padding-left: 0px;
 }
-
 
 /*---------------------------------------------*/
 input.input100 {
@@ -255,7 +263,7 @@ input.input100 {
 /*------------------------------------------------------------------
 [ Focus Input ]*/
 
-.focus-input100-1, 
+.focus-input100-1,
 .focus-input100-2 {
   display: block;
   position: absolute;
@@ -334,7 +342,6 @@ input.input100 {
   -webkit-animation-fill-mode: both;
 }
 
-
 @keyframes full-w {
   to {
     width: calc(100% + 1px);
@@ -347,7 +354,9 @@ input.input100 {
   }
 }
 
-.col-auto label{color:#888;}
+.col-auto label {
+  color: #888;
+}
 
 /*------------------------------------------------------------------
 [ Button ]*/
@@ -389,7 +398,6 @@ input.input100 {
 .login100-form-btn:hover {
   background-color: #31834c9c;
 }
-
 
 /*------------------------------------------------------------------
 [ Alert validate ]*/
@@ -457,6 +465,3 @@ input.input100 {
     opacity: 1;
   }
 }
-
-
-
