@@ -1,0 +1,512 @@
+<!doctype html>
+<html>
+    <head>
+            <link rel="stylesheet" type="text/css" href="./lib/font-awesome/css/font-awesome.min.css">		
+            <link rel="stylesheet" type="text/css" href="./css/dashboard.css">	
+            <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet">
+
+            
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="../../static/vendor/bootstrap/css/bootstrap.min.css">	
+    <!--===============================================================================================-->
+        <link rel="stylesheet" type="text/css" href="./dashboard/css/util.css">
+        <link rel="stylesheet" type="text/css" href="./dashboard/css/animated.min.css">
+        <link rel="stylesheet" type="text/css" href="./dashboard/css/main.css">
+    <!--===============================================================================================-->
+    <link href="img/favicon.ico" rel="icon" />
+    <link href="img/favicon.ico" rel="apple-touch-icon" />
+
+        <title>Padimi</title>
+    </head>
+    <style>
+        body{
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+        }
+        .btn-card {
+  background: #72738E;
+  color: white;
+  padding: 15px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  margin-top: 20px;
+}
+    </style>
+    <body style="background:#F2F4F8; font-family: arial;">
+        <div class="main-container">
+            <div class='aside' id="asideBox">
+                <div style="background: white; padding:20px; box-sizing: border-box;" >
+                        <a href="./index.html" ><img style="width:100%; height: 100%" src="img/logo.JPG" alt="" title=""/></a>
+                </div>
+                <div class='user-profile bordered'>
+                    <img src="./img/33.jpg">
+                </div>
+                <div style="font-size: 12px;text-align: center; color: #817070;">
+                    <div><b>KIM</b></div>
+                    <b>12:30pm</b>
+                </div>
+                <div class="admin-menu">
+                    <a href='javascript:void()'><span class='active nav-list' name="users-nav"><div><img style="width: 22px; height:22px;" src="./img/svgs/checklist.svg" alt="checklist"></div> My subscription</span></a>
+                    <a href='javascript:void()'><span class='nav-list'><div><img style="width: 22px; height:22px;" src="./img/svgs/insurance.svg" alt="checklist"></div> HMO</span></a>
+                    <a href='javascript:void()'><span class='nav-list'> <div><img style="width: 22px; height:22px;" src="./img/svgs/health-insurance.svg" alt="checklist"></div>Insurance</span></a>
+                    <a href='javascript:void()'><span class='nav-list'> <div><img style="width: 22px; height:22px;" src="./img/svgs/money.svg" alt="checklist"></div>Finance</span></a>
+                    <a href='javascript:void()'><span class='nav-list'> <div><img style="width: 22px; height:22px;" src="./img/svgs/settings.svg" alt="checklist"></div>Setting</span></a>
+                </div>
+            </div>
+            <div class="main-side" id="mainBox">
+                <div class='header-bar'>
+                    <a href="#" id='navicon'><i class='fa fa-navicon fa-2x'></i></a> 
+                    <span class="logout">
+                        Hello <small></small>Kim </small> &nbsp; | &nbsp; <a href='../../logout'><font color="#f66"><i class='fa fa-power-off'></i> Log-out</font></a>
+                    </span>
+                </div>
+                
+                <!-- <div class='summary-stats' style="height:140px;"><div class='summary-stats bordered' style="border-color:#6f6;"></div></div> -->
+
+            <!--- My subscription--->
+            <div id="vacancies" class="display">
+                <div class="subscribtion">
+                    <div class="sub-text">
+                        <div><h1>Subscription</h1></div>
+                        <div><p>Your Active padimi plans</p></div>
+                    </div>
+                    <div class="contact-us">
+                            <div class="contact-us-container">
+                                    <i class="fa fa-user" aria-hidden="true"></i>
+                                    <span>Contact support</span>
+                            </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="plans-container">
+                    <div class="plan plan-active">
+                        <h4>HMO</h4>
+                    </div>
+                    <div class="plan">
+                        <h4>Finance</h4>
+                    </div>
+                    <div class="plan">
+                        <h4>Insurance</h4>
+                    </div>
+                </div>
+                
+                <section class="site-section mt-4" style="background: #eee;">
+                        <div class="container">
+                  
+                          <div class="row mb-5 justify-content-center">
+                            <div class="col-md-7 text-center">
+                              <h2 class="section-title mb-2">3 Padi Items Acquired</h2>
+                            </div>
+                          </div>
+                  
+                          <div class="mb-0" >
+                              <div   style="background:#fff;" class="row align-items-start job-item pb-5 mb-3 pt-5" id="border-bottom">
+                                <div class="col-md-2">
+                                  <a href="#"><img src="./img/insurance.PNG" alt="Image" class="img-fluid"></a>
+                                </div>
+                                <div class="col-md-4">
+                                  <span class="badge badge-success px-2 py-1 mb-3" style="font-size: 15px">Active</span>
+                                  <h2><a href="job-single.html">Padi Light</a> </h2>
+                                  <p class="meta">HMO: <strong>Novo</strong></p>
+                                </div>
+                                <div class="col-md-3 text-left">
+                                  <br>Location</br>
+                                  <p class="meta"><strong>Ikeja</strong></p>
+                                </div>
+                                <div class="col-md-3 text-md-right">
+                                  Amount<br/>
+                                  <strong class="text-black">&#8358;2500</strong>
+                                </div>
+                              </div>
+                            </div>
+
+
+                            <div class="mb-0">
+                                    <div   style="background:#fff;" class="row align-items-start job-item pb-5 mb-3 pt-5" id="border-bottom">
+                                      <div class="col-md-2">
+                                        <a href="#"><img src="./img/insurance.PNG" alt="Image" class="img-fluid"></a>
+                                      </div>
+                                      <div class="col-md-4">
+                                        <span class="badge badge-success px-2 py-1 mb-3" style="font-size: 15px">Active</span>
+                                        <h2><a href="job-single.html">Padi Light</a> </h2>
+                                        <p class="meta">HMO: <strong>Novo</strong></p>
+                                      </div>
+                                      <div class="col-md-3 text-left">
+                                        <br>Location</br>
+                                        <p class="meta"><strong>Ikeja</strong></p>
+                                      </div>
+                                      <div class="col-md-3 text-md-right">
+                                        Amount<br/>
+                                        <strong class="text-black">&#8358;2500</strong>
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="mb-0">
+                                        <div   style="background:#fff;" class="row align-items-start job-item pb-5 mb-3 pt-5" id="border-bottom">
+                                          <div class="col-md-2">
+                                            <a href="#"><img src="./img/insurance.PNG" alt="Image" class="img-fluid"></a>
+                                          </div>
+                                          <div class="col-md-4">
+                                            <span class="badge badge-danger  px-2 py-1 mb-3" style="font-size: 15px">Inactive</span>
+                                            <h2><a href="job-single.html">Padi Light</a> </h2>
+                                            <p class="meta">HMO: <strong>Novo</strong></p>
+                                          </div>
+                                          <div class="col-md-3 text-left">
+                                            <br>Location</br>
+                                            <p class="meta"><strong>Ikeja</strong></p>
+                                          </div>
+                                          <div class="col-md-3 text-md-right">
+                                            Amount<br/>
+                                            <strong class="text-black">&#8358;2500</strong>
+                                          </div>
+                                        </div>
+                                      </div>
+                  
+                        </div>
+                      </section>
+            </div>
+            <!--- end of My Subscription--->
+
+            <!--- HMO --->
+            <div id="vacancies" class="display">
+                    <div class="subscribtion">
+                        <div class="sub-text">
+                            <div><h1>HMO</h1></div>
+                            <div><p>List of HMO plans we offer</p></div>
+                        </div>
+                        <div class="contact-us">
+                                <div class="contact-us-container plan-active">
+                                        <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+                                        <span>HMO locations</span>
+                                </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container-fluid pt-x">
+                            <div class="container">                        
+                                <div class="row mb-5 mt-5">
+                                    <div class="card-deck">
+                                        <div class="card text-center" style="width:20rem">
+                                            <div class="card-body">
+                                                <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Light</h4>
+                                                <small class="colours">Get 2 free/month</small>
+                        
+                                                <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦2.5k<span style="font-size: 0.7rem">/month</span></h4>
+                                                <hr>
+                                                <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                <p class="colours-cent">Health Point</p>
+                                                <p class="mb-1 colours-cent">Novo</p>
+                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                <button class="btn btn-card ">Start with Padi Light</button>
+                                                <hr>
+                                                <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                            </div>
+                                        </div>
+                                        <div class="card text-center shadow-lg shadows" style="width:20rem">
+                                                <div class="card-body">
+                                                        <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Start</h4>
+                                                        <small class="colours">Get 2 free/month</small>
+                                
+                                                        <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦3-5k<span style="font-size: 0.7rem">/month</span></h4>
+                                                        <hr>
+                                                        <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                        <p class="colours-cent">Health Point</p>
+                                                        <p class="mb-1 colours-cent">Novo</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <button class="btn btn-card ">Start with Padi Start</button>
+                                                        <hr>
+                                                        <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                    </div>
+                                        </div>
+                                        
+                                    
+                                    </div>
+                                </div>
+                                <div class="row mb-5 mt-5">
+                                        <div class="card-deck">
+                                            <div class="card text-center" style="width:20rem">
+                                                <div class="card-body">
+                                                    <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Commit</h4>
+                                                    <small class="colours">Get 2 free/month</small>
+                            
+                                                    <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦5k<span style="font-size: 0.7rem">/month</span></h4>
+                                                    <hr>
+                                                    <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                    <p class="colours-cent">Health Point</p>
+                                                    <p class="mb-1 colours-cent">Novo</p>
+                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                    <button class="btn btn-card ">Start with Padi Commit</button>
+                                                    <hr>
+                                                    <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                </div>
+                                            </div>
+                                            <div class="card text-center shadow-lg shadows" style="width:20rem">
+                                                    <div class="card-body">
+                                                            <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Prime</h4>
+                                                            <small class="colours">Get 2 free/month</small>
+                                    
+                                                            <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦6k<span style="font-size: 0.7rem">/month</span></h4>
+                                                            <hr>
+                                                            <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                            <p class="colours-cent">Health Point</p>
+                                                            <p class="mb-1 colours-cent">Novo</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <button class="btn btn-card ">Start with Padi Prime</button>
+                                                            <hr>
+                                                            <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                        </div>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                        
+                        
+                    </div>
+            </div>
+            <!--- end of HOM--->
+
+            <!--- Insurance --->
+            <div id="vacancies" class="display">
+                    <div class="subscribtion">
+                        <div class="sub-text">
+                            <div><h1>Insurance</h1></div>
+                            <div><p>List of Insurance plans we offer</p></div>
+                        </div>
+                        <div class="contact-us">
+                                <div class="contact-us-container plan-active">
+                                        <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+                                        <span>Insurance Locations</span>
+                                </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container-fluid pt-x">
+                            <div class="container">
+                                    <div class="row mb-5 mt-5">
+                                            <div class="card-deck">
+                                                <div class="card text-center" style="width:20rem">
+                                                    <div class="card-body">
+                                                        <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Light</h4>
+                                                        <small class="colours">Get 2 free/month</small>
+                                
+                                                        <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦2.5k<span style="font-size: 0.7rem">/month</span></h4>
+                                                        <hr>
+                                                        <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                        <p class="colours-cent">Health Point</p>
+                                                        <p class="mb-1 colours-cent">Novo</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <button class="btn btn-card ">Start with Padi Light</button>
+                                                        <hr>
+                                                        <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="card text-center shadow-lg shadows" style="width:20rem">
+                                                        <div class="card-body">
+                                                                <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Start</h4>
+                                                                <small class="colours">Get 2 free/month</small>
+                                        
+                                                                <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦3-5k<span style="font-size: 0.7rem">/month</span></h4>
+                                                                <hr>
+                                                                <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                                <p class="colours-cent">Health Point</p>
+                                                                <p class="mb-1 colours-cent">Novo</p>
+                                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                <button class="btn btn-card ">Start with Padi Start</button>
+                                                                <hr>
+                                                                <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                            </div>
+                                                </div>
+                                                
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="row mb-5 mt-5">
+                                                <div class="card-deck">
+                                                    <div class="card text-center" style="width:20rem">
+                                                        <div class="card-body">
+                                                            <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Commit</h4>
+                                                            <small class="colours">Get 2 free/month</small>
+                                    
+                                                            <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦5k<span style="font-size: 0.7rem">/month</span></h4>
+                                                            <hr>
+                                                            <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                            <p class="colours-cent">Health Point</p>
+                                                            <p class="mb-1 colours-cent">Novo</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <button class="btn btn-card ">Start with Padi Commit</button>
+                                                            <hr>
+                                                            <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card text-center shadow-lg shadows" style="width:20rem">
+                                                            <div class="card-body">
+                                                                    <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Prime</h4>
+                                                                    <small class="colours">Get 2 free/month</small>
+                                            
+                                                                    <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦6k<span style="font-size: 0.7rem">/month</span></h4>
+                                                                    <hr>
+                                                                    <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                                    <p class="colours-cent">Health Point</p>
+                                                                    <p class="mb-1 colours-cent">Novo</p>
+                                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                    <button class="btn btn-card ">Start with Padi Prime</button>
+                                                                    <hr>
+                                                                    <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                                </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                            </div>
+                        
+                        
+                        </div>
+            </div>
+            <!--- end of Insurance--->
+
+            <!--- Finance --->
+            <div id="vacancies" class="display">
+                    <div class="subscribtion">
+                        <div class="sub-text">
+                            <div><h1>Finance</h1></div>
+                            <div><p>List of Finance plans we offer</p></div>
+                        </div>
+                        <div class="contact-us">
+                                <div class="contact-us-container plan-active">
+                                        <!-- <i class="fa fa-user" aria-hidden="true"></i> -->
+                                        <span>Finance Locations</span>
+                                </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="container-fluid pt-x">
+                            <div class="container">
+                                    <div class="row mb-5 mt-5">
+                                            <div class="card-deck">
+                                                <div class="card text-center" style="width:20rem">
+                                                    <div class="card-body">
+                                                        <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Light</h4>
+                                                        <small class="colours">Get 2 free/month</small>
+                                
+                                                        <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦2.5k<span style="font-size: 0.7rem">/month</span></h4>
+                                                        <hr>
+                                                        <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                        <p class="colours-cent">Health Point</p>
+                                                        <p class="mb-1 colours-cent">Novo</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                        <button class="btn btn-card ">Start with Padi Light</button>
+                                                        <hr>
+                                                        <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                    </div>
+                                                </div>
+                                                <div class="card text-center shadow-lg shadows" style="width:20rem">
+                                                        <div class="card-body">
+                                                                <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Start</h4>
+                                                                <small class="colours">Get 2 free/month</small>
+                                        
+                                                                <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦3-5k<span style="font-size: 0.7rem">/month</span></h4>
+                                                                <hr>
+                                                                <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                                <p class="colours-cent">Health Point</p>
+                                                                <p class="mb-1 colours-cent">Novo</p>
+                                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                <button class="btn btn-card ">Start with Padi Start</button>
+                                                                <hr>
+                                                                <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                            </div>
+                                                </div>
+                                                
+                                            
+                                            </div>
+                                        </div>
+                                        <div class="row mb-5 mt-5">
+                                                <div class="card-deck">
+                                                    <div class="card text-center" style="width:20rem">
+                                                        <div class="card-body">
+                                                            <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Commit</h4>
+                                                            <small class="colours">Get 2 free/month</small>
+                                    
+                                                            <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦5k<span style="font-size: 0.7rem">/month</span></h4>
+                                                            <hr>
+                                                            <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                            <p class="colours-cent">Health Point</p>
+                                                            <p class="mb-1 colours-cent">Novo</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                            <button class="btn btn-card ">Start with Padi Commit</button>
+                                                            <hr>
+                                                            <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card text-center shadow-lg shadows" style="width:20rem">
+                                                            <div class="card-body">
+                                                                    <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Prime</h4>
+                                                                    <small class="colours">Get 2 free/month</small>
+                                            
+                                                                    <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦6k<span style="font-size: 0.7rem">/month</span></h4>
+                                                                    <hr>
+                                                                    <!-- <div style="border:0.1rem solid #E3E3E8; width:100%" class="mb-5 mt-5"></div> -->
+                                                                    <p class="colours-cent">Health Point</p>
+                                                                    <p class="mb-1 colours-cent">Novo</p>
+                                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                    <p class="mb-1 colours-cent">Lorem ipsum</p>
+                                                                    <button class="btn btn-card ">Start with Padi Prime</button>
+                                                                    <hr>
+                                                                    <h6 class="txt1 mt-4">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
+                                                                </div>
+                                                    </div>
+                                                </div>
+                                        </div>
+                            </div>
+                        
+                        
+                    </div>
+            </div>
+            <!--- end of Finance--->
+            </div>
+
+
+
+        </div>
+    </body>
+</html>
+
+<script src="./js/dashboard.js"></script>

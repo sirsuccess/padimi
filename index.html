@@ -31,24 +31,14 @@
     <link href="css/style.css" rel="stylesheet" />
   </head>
 
-  <style>
-    #header {
-      background: #ffffff;
-    }
-  </style>
-
   <body>
-    <button type="button" id="mobile-nav-toggle">
-      <i class="fa fa-bars"></i>
-    </button>
     <!--==========================
     Header
   ============================-->
     <header id="header">
       <div class="container-fluid">
         <div id="logo" class="pull-left">
-          <!-- <h3><a href="./index.html">Padimi</a></h3> -->
-          <a href="./index.html"><img src="img/padi2.png" alt="" title=""/></a>
+          <a href="#intro"><img src="img/logo.JPG" alt="" title=""/></a>
         </div>
 
         <nav id="nav-menu-container">
@@ -139,6 +129,32 @@
               </div>
             </div>
           </div>
+
+          <a
+            class="carousel-control-prev"
+            href="#introCarousel"
+            role="button"
+            data-slide="prev"
+          >
+            <span
+              class="carousel-control-prev-icon ion-chevron-left"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Previous</span>
+          </a>
+
+          <a
+            class="carousel-control-next"
+            href="#introCarousel"
+            role="button"
+            data-slide="next"
+          >
+            <span
+              class="carousel-control-next-icon ion-chevron-right"
+              aria-hidden="true"
+            ></span>
+            <span class="sr-only">Next</span>
+          </a>
         </div>
       </div>
     </section>
@@ -160,7 +176,7 @@
             </p>
           </header>
 
-          <div class="row about-cols text-center-container">
+          <div class="row about-cols text-center text-center-container">
             <div class="col-md-4 wow fadeInUp">
               <div class="about-col">
                 <div class="img">
@@ -179,7 +195,10 @@
               </div>
             </div>
 
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.1s">
+            <div
+              class="col-md-4 wow text-center fadeInUp"
+              data-wow-delay="0.1s"
+            >
               <div class="about-col">
                 <div class="img">
                   <img src="img/healthin.PNG" alt="" class="img-fluid" />
@@ -198,7 +217,10 @@
               </div>
             </div>
 
-            <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+            <div
+              class="col-md-4 wow text-center fadeInUp"
+              data-wow-delay="0.2s"
+            >
               <div class="about-col">
                 <div class="img">
                   <img src="img/insurance.PNG" alt="" class="img-fluid" />
@@ -219,7 +241,6 @@
           </div>
         </div>
       </section>
-      <!-- #about -->
 
       <!--==========================
       Clients Section
@@ -242,7 +263,6 @@
           </div>
         </div>
       </section>
-      <!-- #clients -->
     </main>
 
     <!--==========================
