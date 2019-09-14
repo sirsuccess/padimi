@@ -797,7 +797,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 --------------------------------*/
 
 #call-to-action {
-  background: linear-gradient(rgba(0, 142, 99, 0.8), rgba(0, 0, 0, 0.8)),
+  background: linear-gradient(rgba(39, 34, 100, 0.8), rgba(0, 0, 0, 0.8)),
     url(../img/33.jpg) fixed center center;
   background-size: cover;
   padding: 60px 0;
