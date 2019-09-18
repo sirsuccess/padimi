@@ -4,6 +4,7 @@ import bodyParser from "body-parser";
 import cors from "cors";
 
 import userRouter from "./routes/user.route";
+import padimiRouter from "./routes/padimi.route";
 
 const app = express();
 dotenv.config();
@@ -23,6 +24,7 @@ app.get("/", (req, res) =>
 );
 
 app.use(`${prefix}/`, userRouter);
+app.use(`${prefix}/padimi/`, padimiRouter);
 
 app.use(async (req, res) => {
   try {

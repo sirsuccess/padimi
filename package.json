@@ -7,6 +7,7 @@
     "start": "node ./build/index.js",
     "test": "npm run drop-table-schema && npm run table-schema && nyc mocha -r esm  --timeout 15000 --exit",
     "table-schema": "babel-node ./server/migrations/index.js create",
+    "add-table-schema": "babel-node ./server/migrations/index.js addItem",
     "drop-table-schema": "babel-node ./server/migrations/index.js drop",
     "dev": "nodemon --exec babel-node ./server/index.js",
     "heroku-postbuild": "npm run clean && npm run build-babel && npm run drop-table-schema && npm run table-schema",
