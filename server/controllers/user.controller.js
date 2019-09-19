@@ -123,6 +123,57 @@ class UserController {
     }
   }
 
+  static async updatePassword(req, res) {
+    try {
+      const { new_password, password } = req.body;
+      const checkIfUserExist = await userService.findUserById(
+        req.userData.user
+      );
+      if (checkIfUserExist.length <= 0) {
+        throw new Error("User not registered please signup");
+      }
+      const checkPassword = await bcrypt.compare(
+        password,
+        checkIfUserExist[0].password
+      );
+      if (!checkPassword) {
+        throw new Error("invalid password Enter your old password");
+      }
+
+      const hashPassword = await bcrypt.hash(new_password, 10);
+      const user = {
+        hashPassword
+      };
+      const result = await userService.updateUser(user, req.userData.user);
+
+      const jwtToken = await jwt.sign(
+        {
+          user: checkIfUserExist[0].id,
+          info: `${checkIfUserExist[0].first_name} ${checkIfUserExist[0].last_name}`
+        },
+        secret,
+        {
+          expiresIn: "12h"
+        }
+      );
+      return res.status(200).json({
+        status: 200,
+        data: { result, token: jwtToken }
+      });
+    } catch (error) {
+      if (error.message === "invalid password or email") {
+        return res.status(400).json({
+          status: 400,
+          error: error.message
+        });
+      }
+      return res.status(404).json({
+        status: 404,
+        error: error.message
+      });
+    }
+  }
+
   static async createPhoto(req, res) {
     try {
       if (req.file) {
@@ -137,6 +188,30 @@ class UserController {
       } else {
         throw new Error("Please add an image file");
       }
+    } catch (error) {
+      if (error.message === "User not registered") {
+        return res.status(401).json({
+          status: 401,
+          error: error.message
+        });
+      }
+      return res.status(409).json({
+        status: 409,
+        error: error.message
+      });
+    }
+  }
+
+  static async buyPlan(req, res) {
+    try {
+      const buyOurPlan = await userService.buyOurPlan(req);
+      console.log(req.body);
+      return res.status(201).json({
+        status: 201,
+        data: {
+          buy: buyOurPlan[0]
+        }
+      });
     } catch (error) {
       if (error.message === "User not registered") {
         return res.status(401).json({

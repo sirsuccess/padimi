@@ -49,6 +49,16 @@ class UserService {
     return result.rows[0];
   }
 
+  static async updateUser(user, id) {
+    const { hashPassword } = user;
+    const sql = "UPDATE users SET password = $1 WHERE id = $2 RETURNING *";
+    const bindParameters = [hashPassword, id];
+    const client = await db.connect();
+    const result = await client.query(sql, bindParameters);
+    client.release();
+    return result.rows[0];
+  }
+
   static async checkUser(email) {
     const sql = "SELECT from users WHERE email = $1";
     const bindParameters = [email];
@@ -67,6 +77,15 @@ class UserService {
     return result.rows;
   }
 
+  static async findUserById(id) {
+    const sql = "SELECT * from users WHERE id = $1";
+    const bindParameters = [id];
+    const client = await db.connect();
+    const result = await client.query(sql, bindParameters);
+    client.release();
+    return result.rows;
+  }
+
   static async addImage(req, uploadImage) {
     const img = uploadImage.secure_url;
     const imgID = uploadImage.public_id;
@@ -74,6 +93,29 @@ class UserService {
     const sql =
       "UPDATE users SET image = $1, image_id = $2 WHERE id = $3 RETURNING *";
     const bindParameters = [img, imgID, userId];
+    const client = await db.connect();
+    const result = await client.query(sql, bindParameters);
+    client.release();
+    return result.rows;
+  }
+
+  static async buyOurPlan(req) {
+    const { plan, type, amount, payment_reciept_id, location } = req.body;
+    const datePaid = new Date();
+    const endingDate = datePaid.setMonth(datePaid.getMonth() + 1);
+    console.log(req.body);
+    const userId = req.userData.user;
+    const sql =
+      "INSERT INTO payments (plan, type, amount, payment_reciept_id, location, ending_date, user_id ) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *";
+    const bindParameters = [
+      plan,
+      type,
+      amount,
+      payment_reciept_id,
+      location,
+      endingDate,
+      userId
+    ];
     const client = await db.connect();
     const result = await client.query(sql, bindParameters);
     client.release();

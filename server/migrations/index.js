@@ -11,7 +11,8 @@ const drop = () => {
   const padi_connect = "DROP TABLE IF EXISTS padi_connect CASCADE";
   const padi_premium = "DROP TABLE IF EXISTS padi_premium CASCADE";
   const hospitals = "DROP TABLE IF EXISTS hospitals CASCADE";
-  const dropTables = `${usersTable};${padi_lite};${padi_start};${padi_connect};${padi_premium};${hospitals};`;
+  const payments = "DROP TABLE IF EXISTS payments CASCADE";
+  const dropTables = `${usersTable};${padi_lite};${padi_start};${padi_connect};${padi_premium};${hospitals};${payments};`;
 
   pool.query(`${dropTables}`, err => {
     if (err) {
@@ -84,7 +85,21 @@ const create = () => {
     state VARCHAR(1600)
   )`;
 
-  const migrationQueries = `${usersTable};${padi_lite};${padi_start};${padi_connect};${padi_premium};${hospitals};`;
+  const payments = `CREATE TABLE IF NOT EXISTS
+  payments(
+    id SERIAL PRIMARY KEY,
+    plan VARCHAR(50) NOT NULL,
+    type VARCHAR(50) NOT NULL,
+    amount INTEGER NOT NULL,
+    payment_reciept_id INTEGER NOT NULL,
+    location VARCHAR(250) NOT NULL,
+    datePaid TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
+    ending_date VARCHAR(250) NOT NULL,
+    user_id INTEGER NOT NULL,
+    CONSTRAINT fk_owner FOREIGN KEY (user_id) REFERENCES  users (id)
+  )`;
+
+  const migrationQueries = `${usersTable};${padi_lite};${padi_start};${padi_connect};${padi_premium};${hospitals};${payments};`;
   pool.query(`${migrationQueries}`, (err, res) => {
     if (err) {
       console.log(err);

@@ -31,4 +31,22 @@ router.post(
   userController.createPhoto
 );
 
+router.patch(
+  "/password",
+  verifyToken.validate,
+  trimRequest.body,
+  validation.passwordReset,
+  userValidation.validateUserReq,
+  userController.updatePassword
+);
+
+router.post(
+  "/buy",
+  verifyToken.validate,
+  trimRequest.body,
+  validation.buyRequest,
+  userValidation.validateUserReq,
+  userController.buyPlan
+);
+
 export default router;

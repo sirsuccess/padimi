@@ -41,33 +41,35 @@ const signInValidation = [
     .isLength({ min: 6 })
 ];
 
-const createCarValidation = [
-  body("name")
-    .withMessage("First name with minimum of 2 characters long is required")
+const buyRequest = [
+  body("plan")
+    .matches(/^padi_lite$|^padi_start$|^padi_connect$|^padi_premium$/i)
+    .withMessage("A valid padi plan is required")
     .trim(),
-  body(
-    "manufacturer",
-    "manufacturer with minimum of 2 characters long is required"
-  )
+  body("type")
+    .matches(/^hmo$|^insurance$|^finance$/i)
+    .withMessage("A valid padi type is required")
+    .trim(),
+  body("amount", "Please enter buying amount")
+    .trim()
+    .isNumeric(),
+  body("payment_reciept_id", "Please enter reciept id")
+    .trim()
+    .isNumeric(),
+  body("location", "Please enter plan location")
     .isLength({ min: 2 })
-    .trim(),
-  body("model", "model with minimum of 2 characters long is required")
-    .isLength({ min: 2 })
-    .trim(),
-  body("price", "price must be numbers only")
-    .isNumeric()
-    .trim(),
-  body("body_type", "body type should be car or truck or van or trailer")
-    .matches(/^car$|^truck$|^trailer$|^van$/i)
-    .trim(),
-  body("state", "state should be new or old")
-    .matches(/^new$|^old$/i)
     .trim()
 ];
 
-const carIdParam = [param("car_id", "Invalid car id").isNumeric()];
-const carPrice = [body("price", "price should be numbers only").isNumeric()];
-const carStatus = [body("status", "status should be sold").matches(/^sold$/i)];
+const passwordReset = [
+  body("password", "Please enter a password at least 6 characters long")
+    .trim()
+    .isLength({ min: 6 }),
+  body("new_password", "Please enter a password at least 6 characters long")
+    .trim()
+    .isLength({ min: 6 })
+];
+
 const purchaseOrder = [
   body("car_id", "car id should be numeric").isNumeric(),
   body("amount", "price offered should be number").isNumeric()
@@ -78,11 +80,9 @@ const orderIdParam = [param("order_id", "Invalid order id").isNumeric()];
 export default {
   signUpValidation,
   signInValidation,
-  createCarValidation,
-  carIdParam,
-  carPrice,
-  carStatus,
+  passwordReset,
   purchaseOrder,
   orderPrice,
+  buyRequest,
   orderIdParam
 };
