@@ -28,6 +28,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
   <body>
     <!--==========================
@@ -61,13 +62,15 @@
                 <header class=" section-header">
                   <h3>Login</h3>
                 </header>
-                <form id="register-form">
+                <div hidden id="spinner"></div>
+                <form id="login-form" class="m-3">
                   <div class="form-row">
                     <div class="form-group col-md-12">
                       <label for="inputEmail4">Email</label>
                       <input
                         type="email"
                         name="email"
+                        required
                         class="form-control"
                         placeholder="Email"
                       />
@@ -78,6 +81,7 @@
                         type="password"
                         class="form-control"
                         name="password"
+                        required
                         id="inputPassword4"
                         placeholder="Password"
                       />
@@ -86,19 +90,19 @@
 
                   <div class="form-row"></div>
                   <div class="form-btn-container">
-                    <!-- <button
+                    <button
                       type="submit"
                       id="btn1"
                       class="btn btn-primary form-btn"
                     >
                       Login
-                    </button> -->
-                    <a href="./dashboard.html" class="btn btn-primary form-btn"
+                    </button>
+                    <!-- <a href="./dashboard.html" class="btn btn-primary form-btn"
                       >dashboard
-                    </a>
+                    </a> -->
                   </div>
 
-                  <div id="link">
+                  <div id="link" class="p-3">
                     Not Register?<a href="./signup.html">
                       <span>Sign up here</span></a
                     >
@@ -187,6 +191,7 @@
     <div id="preloader"></div>
 
     <!-- JavaScript Libraries -->
+    <script src="./js/login.js"></script>
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/superfish/superfish.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>

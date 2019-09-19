@@ -20,6 +20,11 @@
     <!-- Bootstrap CSS File -->
     <link href="lib/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
 
+    <!-- <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"
+    /> -->
+
     <!-- Main Stylesheet File -->
     <link href="css/style.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/register.css" />
@@ -28,6 +33,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
   </head>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
 
   <body>
     <!--==========================
@@ -61,35 +67,28 @@
                 <header class=" section-header">
                   <h3>Sign up</h3>
                 </header>
-                <form action="/register" method="post" id="register-form">
+                <div hidden id="spinner"></div>
+                <form id="register-form">
                   <div class="form-row">
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">First Name</label>
                       <input
                         type="text"
-                        name="firstname"
+                        name="first_name"
                         class="form-control"
                         class="text-danger"
                         placeholder="First Name"
+                        required
                       />
                     </div>
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Last Name</label>
                       <input
                         type="text"
-                        name="lastname"
+                        name="last_name"
                         class="form-control"
+                        required
                         placeholder="Last Name"
-                      />
-                    </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputEmail4">Username</label>
-                      <input
-                        type="text"
-                        id="user"
-                        name="username"
-                        class="form-control"
-                        placeholder="username"
                       />
                     </div>
 
@@ -100,16 +99,10 @@
                         name="phone"
                         class="form-control"
                         placeholder="Phone Number"
+                        required
                       />
                     </div>
-                    <div
-                      class="alert container"
-                      id="unavailable"
-                      role="alert"
-                      style="display:none; width: 250px; height: 50px; text-align: center"
-                    >
-                      <p id="text" style="width: 100%"></p>
-                    </div>
+
                     <div class="form-group col-md-6">
                       <label for="inputEmail4">Email</label>
                       <input
@@ -117,20 +110,10 @@
                         name="email"
                         class="form-control"
                         placeholder="Email"
+                        required
                       />
                     </div>
-                    <div class="form-group col-md-6">
-                      <label for="inputGender">Gender</label>
-                      <select
-                        name="gender"
-                        id="inputGender"
-                        class="form-control"
-                      >
-                        <option selected disabled>Choose...</option>
-                        <option value="male">Male</option>
-                        <option value="female">Female</option>
-                      </select>
-                    </div>
+
                     <div class="form-group col-md-6">
                       <label for="inputPassword4">Password</label>
                       <input
@@ -138,6 +121,7 @@
                         class="form-control"
                         name="password"
                         id="inputPassword4"
+                        required
                         placeholder="Password"
                       />
                     </div>
@@ -148,6 +132,7 @@
                         class="form-control"
                         name="confirmation"
                         id="inputPassword5"
+                        required
                         placeholder="Confirm Password"
                       />
                     </div>
@@ -161,27 +146,33 @@
                         type="text"
                         class="form-control"
                         id="inputAddress"
+                        required
                         placeholder="1234 Main St"
                       />
                     </div>
-
                     <div class="form-group col-md-6">
-                      <label for="inputState">State</label>
-                      <select name="state" id="inputState" class="form-control">
-                        <option value="" selected disabled>Choose state</option>
-                        <option value="">ass state</option>
-                        <option value="">Chooase state</option>
-                        <option value="">Choose state</option>
+                      <label for="inputGender">Gender</label>
+                      <select
+                        name="gender"
+                        id="inputGender"
+                        class="form-control"
+                        required
+                      >
+                        <option selected disabled>Choose...</option>
+                        <option value="m">Male</option>
+                        <option value="f">Female</option>
                       </select>
                     </div>
 
                     <div class="form-group col-md-6">
-                      <label for="inputCities">City</label>
-                      <select name="city" id="inputCities" class="form-control">
-                        <option value="" selected disabled> Choose city</option>
-                        <option value="">Abia state</option>
-                        <option value="">Imo state</option>
-                        <option value="">Lagos state</option>
+                      <label for="inputState">State</label>
+                      <select
+                        name="state"
+                        id="inputState"
+                        required
+                        class="form-control"
+                      >
+                        <option selected disabled>Choose state</option>
                       </select>
                     </div>
                   </div>
@@ -219,16 +210,6 @@
       <div class="footer-top">
         <div class="container">
           <div class="row">
-            <!-- <div class="col-lg-4 col-md-6 footer-info">
-            <h3>PADIMI</h3>
-            <p>
-              Cras fermentum odio eu feugiat lide par naso tierra. Justo eget
-              nada terra videa magna derita valies darta donna mare fermentum
-              iaculis eu non diam phasellus. Scelerisque felis imperdiet proin
-              fermentum leo. Amet volutpat consequat mauris nunc congue.
-            </p>
-          </div> -->
-
             <div class="col-lg-6 col-md-6 footer-links">
               <h4>Useful Links</h4>
               <ul>
@@ -284,6 +265,7 @@
     <div id="preloader"></div>
 
     <!-- JavaScript Libraries -->
+    <script src="./js/register.js"></script>
     <script src="lib/jquery/jquery.min.js"></script>
     <script src="lib/superfish/superfish.min.js"></script>
     <script src="lib/wow/wow.min.js"></script>
