@@ -2,6 +2,7 @@ import jwt from "jsonwebtoken";
 import bcrypt from "bcrypt";
 import dotenv from "dotenv";
 import userService from "../services/user.services";
+import cloudinary from "../config/cloudinary";
 
 dotenv.config();
 const secret = process.env.SECRET;
@@ -33,24 +34,6 @@ class UserController {
       if (checkIfUserExist > 0) {
         throw new Error("User already registered please sign in");
       }
-      // if (user.email === 'admin@gmail.com') {
-      //   const registerAdmin = await userService.createUser(user, true);
-      //   const jwtTokenAdmin = jwt.sign({ user: registerAdmin.id, admin: true }, secret, {
-      //     expiresIn: '12h',
-      //   });
-      //   return res.status(201).json({
-      //     status: 201,
-      //     data: {
-      //       token: jwtTokenAdmin,
-      //       id: registerAdmin.id,
-      //       first_name: registerAdmin.first_name,
-      //       last_name: registerAdmin.last_name,
-      //       email: registerAdmin.email,
-      //       address: registerAdmin.address,
-      //       is_admin: registerAdmin.is_admin,
-      //     },
-      //   });
-      // }
       const result = await userService.createUser(user, false);
       const jwtToken = jwt.sign(
         {
@@ -135,6 +118,34 @@ class UserController {
       }
       return res.status(404).json({
         status: 404,
+        error: error.message
+      });
+    }
+  }
+
+  static async createPhoto(req, res) {
+    try {
+      if (req.file) {
+        const uploadImage = await cloudinary.uploader.upload(req.file.path);
+        const newUserInfo = await userService.addImage(req, uploadImage);
+        return res.status(201).json({
+          status: 201,
+          data: {
+            newUserInfo
+          }
+        });
+      } else {
+        throw new Error("Please add an image file");
+      }
+    } catch (error) {
+      if (error.message === "User not registered") {
+        return res.status(401).json({
+          status: 401,
+          error: error.message
+        });
+      }
+      return res.status(409).json({
+        status: 409,
         error: error.message
       });
     }

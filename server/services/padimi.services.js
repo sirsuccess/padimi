@@ -32,5 +32,13 @@ class PadimiServices {
     client.release();
     return result.rows;
   }
+
+  static async getHospitalsItems() {
+    const sql = "SELECT * from hospitals";
+    const client = await db.connect();
+    const result = await client.query(sql);
+    client.release();
+    return result.rows;
+  }
 }
 export default PadimiServices;

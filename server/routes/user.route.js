@@ -1,19 +1,34 @@
-import express from 'express';
-import validation from '../helpers/validation';
-import userValidation from '../middleware/user.validation';
-import userController from '../controllers/user.controller';
-
+import express from "express";
+import trimRequest from "trim-request";
+import verifyToken from "../middleware/tokenHandler";
+import validation from "../helpers/validation";
+import userValidation from "../middleware/user.validation";
+import userController from "../controllers/user.controller";
+import createImage from "../helpers/photoRequestChecker";
 
 const router = express.Router();
 
-router.post('/auth/signup',
+router.post(
+  "/auth/signup",
   validation.signUpValidation,
   userValidation.validateUserReq,
-  userController.registerUser);
+  userController.registerUser
+);
 
-router.post('/auth/signin',
+router.post(
+  "/auth/signin",
   validation.signInValidation,
   userValidation.validateUserReq,
-  userController.loginUser);
+  userController.loginUser
+);
+
+router.post(
+  "/profile",
+  verifyToken.validate,
+  trimRequest.body,
+  createImage.upload.single("img_url"),
+  userValidation.validatePostImage,
+  userController.createPhoto
+);
 
 export default router;

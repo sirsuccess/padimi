@@ -66,5 +66,18 @@ class UserService {
     client.release();
     return result.rows;
   }
+
+  static async addImage(req, uploadImage) {
+    const img = uploadImage.secure_url;
+    const imgID = uploadImage.public_id;
+    const userId = req.userData.user;
+    const sql =
+      "UPDATE users SET image = $1, image_id = $2 WHERE id = $3 RETURNING *";
+    const bindParameters = [img, imgID, userId];
+    const client = await db.connect();
+    const result = await client.query(sql, bindParameters);
+    client.release();
+    return result.rows;
+  }
 }
 export default UserService;

@@ -11,4 +11,6 @@ router.get("/padi_connect", PadimiController.getPadiConnect);
 
 router.get("/padi_premium", PadimiController.getPadiPremium);
 
+router.get("/hospitals", PadimiController.getHospitals);
+
 export default router;

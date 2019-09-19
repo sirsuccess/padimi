@@ -61,5 +61,20 @@ class PadimiController {
       });
     }
   }
+
+  static async getHospitals(req, res) {
+    try {
+      const getHospitalsItems = await PadimiServices.getHospitalsItems();
+      return res.status(200).json({
+        status: 200,
+        data: getHospitalsItems
+      });
+    } catch (error) {
+      return res.status(404).json({
+        status: 404,
+        error: error.message
+      });
+    }
+  }
 }
 export default PadimiController;
