@@ -10,7 +10,7 @@
     "add-table-schema": "babel-node ./server/migrations/index.js addItem",
     "drop-table-schema": "babel-node ./server/migrations/index.js drop",
     "dev": "nodemon --exec babel-node ./server/index.js",
-    "heroku-postbuild": "npm run clean && npm run build-babel && npm run drop-table-schema && npm run table-schema && add-table-schema",
+    "heroku-postbuild": "npm run clean && npm run build-babel && npm run drop-table-schema && npm run table-schema && npm run add-table-schema",
     "clean": "rm -rf build && mkdir build",
     "build-babel": "babel -d ./build ./server -s",
     "generate-lcov": "nyc report --reporter=text-lcov > lcov.info",
