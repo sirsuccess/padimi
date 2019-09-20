@@ -157,12 +157,12 @@ setActiveNav(navIndex);
 let contentLen = 0;
 contentLen = navs.length < tbls.length ? navs.length : tbls.length;
 
-for (j = 0; j <= contentLen; j++) {
+for (j = 0; j < contentLen; j++) {
   navs[j].addEventListener("click", seCurrentNav);
 }
 function seCurrentNav() {
   for (k = 0; k <= contentLen; k++) {
-    if (navs[k].isEqualNode(this)) {
+    if (navs[k] === this) {
       displayTbl(k);
       setActiveNav(k);
     }

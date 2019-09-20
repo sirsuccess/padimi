@@ -136,6 +136,7 @@ iframe {
   font-size: 15px;
   line-height: 1.4;
   color: #04af76;
+  cursor: pointer;
 }
 
 .txt2 {
