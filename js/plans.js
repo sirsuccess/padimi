@@ -22,8 +22,10 @@ document.addEventListener("DOMContentLoaded", async () => {
     item.innerText = userName.first_name;
   });
   // user image
-  const imageUrl = document.querySelector(".profile-image");
-  imageUrl.src = userName.image || "./img/missingIMAGE.PNG";
+  const imageUrl = document.querySelectorAll(".profile-image");
+  imageUrl.forEach(item => {
+    item.src = userName.image || "./img/missingIMAGE.PNG";
+  });
   const resultLite = await fetch(
     "https://padimi.herokuapp.com/api/v1/padimi/padi_lite"
   );
@@ -227,12 +229,11 @@ seeMore.forEach(item => {
   });
 });
 
-//////////////////////////// PAYMENT WITH PAYPAL
+//////////////////////////// PAYMENT WITH PAYPAL //////////////////////////////////
 
 const payment = document.querySelectorAll(".pay-padi");
 payment.forEach(item => {
   item.addEventListener("click", () => {
-    // console.log("pay", item.dataset.type, item.dataset.plan);
     payWithPaystack(item.dataset.type, item.dataset.plan);
   });
 });
@@ -258,7 +259,6 @@ function payWithPaystack(type, plan) {
     email: userEmail,
     amount: price * 100,
     currency: "NGN",
-    // ref: ''+Math.floor((Math.random() * 1000000000) + 1), // generates a pseudo-unique reference. Please replace with a reference you generated. Or remove the line entirely so our API will generate one for you
     metadata: {
       custom_fields: [
         {
@@ -287,7 +287,126 @@ logoutDOM.addEventListener("click", () => {
   window.location.href = "login.html";
 });
 
-// //////////////// GET LOCATIONS /////////////////
-// document.querySelector(".locations").addEventListener("click", () => {
-//   console.log(LocationGlobal);
+// //////////////// UPLOAD PROFILE IMAGE /////////////////
+
+const settingInfo = [
+  `<div class="card card-fluid">
+  <h6 class="card-header"> Public Profile </h6>
+  <div class="card-body">
+    <div class="media mb-3">
+      <div class="user-avatar user-avatar-xl fileinput-button">
+        <div class="fileinput-button-label change-photo-img"> Change photo </div>
+        <img class="profile-image" > 
+        </div>
+        <div class="media-body pl-3 ml-5">
+          <h3 class="card-title"> Public avatar </h3>
+          <h6 class="card-subtitle text-muted"> Click the current avatar to change your photo. </h6>
+          <p class="card-text">
+            <small>JPG, GIF or PNG 400x400, &lt; 2 MB.</small>
+          </p>
+          <div id="progress-avatar" class="progress progress-xs fade">
+            <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+        </div>
+      </div>
+      <form class="profile_image-changer">
+        <div class="form-row">
+          <label for="input01" class="col-md-3">Profile image</label> 
+          <div class="col-md-9 mb-3">
+            <div class="custom-file">
+                <input type="file" enctype="multipart/form-data" id="fileupload-avatar" name="fileupload-avatar" >
+            </div>
+          </div>
+        </div>
+        
+        <hr>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary ml-auto">Update Profile</button>
+        </div>
+      </form>
+    </div>
+</div>`,
+  `<!-- .card -->
+  <div class="card card-fluid">
+<h6 class="card-header"> Account </h6>
+<!-- .card-body -->
+<div class="card-body">
+<!-- form -->
+<form class="change_password">
+<!-- form row -->
+<div class="form-row">
+</div>
+<!-- /form row -->
+<!-- .form-group -->
+<div class="form-group">
+<label for="input03">Email</label>
+<input type="email" class="form-control" id="input03" value="bent10@looper.com" required=""> </div>
+<!-- /.form-group -->
+<!-- .form-group -->
+<div class="form-group">
+<label for="input04">New Password</label>
+<input type="password" class="form-control" id="input04" value="secret" required=""> </div>
+<!-- /.form-group -->
+<hr>
+<!-- .form-actions -->
+<div class="form-actions">
+<!-- enable submit btn when user type their current password -->
+<input type="password" class="form-control ml-auto mr-3" id="input06" placeholder="Enter Current Password" required="">
+<button type="submit" class="btn btn-primary mt-2" >Update Account</button>
+</div>
+<!-- /.form-actions -->
+</form>
+<!-- /form -->
+</div>
+<!-- /.card-body -->
+   </div>
+   <!-- /.card -->`
+];
+
+// const submitProfileDetails = async type => {
+//   // e.preventDefault();
+//   if (type === "image") {
+//     const image = document.querySelector("#fileupload-avatar");
+//     // const image = document.querySelector('input[type="file"]');
+//     const userToken = JSON.parse(localStorage.getItem("token"));
+//     const result = await fetch("https://padimi.herokuapp.com/api/v1/profile", {
+//       method: "post",
+//       headers: {
+//         authorization: userToken,
+//         "Content-Type": "multipart/form-data"
+//       },
+//       body: JSON.stringify({
+//         img_url: image.files[0]
+//       })
+//     });
+//     const resIMG = await result.json();
+//     console.log(resIMG, "joel resIMG");
+//   } else {
+//     console.log(type);
+//   }
+
+// };
+// const profileDOM = document.querySelector("#profileSetting");
+// const accountDOM = document.querySelector("#account");
+// const settingsDetailsDOM = document.querySelector(".settings-details");
+
+// [profileDOM, accountDOM].forEach((item, i) => {
+//   item.addEventListener("click", () => {
+//     settingsDetailsDOM.innerHTML = "";
+//     profileDOM.classList.toggle("active");
+//     accountDOM.classList.toggle("active");
+//     settingsDetailsDOM.innerHTML = settingInfo[i];
+
+//     if (document.querySelector(".change_password")) {
+//       document
+//         .querySelector(".change_password")
+//         .addEventListener("submit", e => {
+//           e.preventDefault();
+//           submitProfileDetails("password");
+//         });
+//     }
+
+//   });
 // });
+
+// console.log(passwordChanger);
