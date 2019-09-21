@@ -17,11 +17,11 @@
     <link href="img/favicon.ico" rel="apple-touch-icon" />
 
         <title>Padimi</title>
-
+      <script src="./js/userValidation.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-
+    
 
     </head>
     <style>
@@ -41,6 +41,8 @@
   -o-border-radius: 30px;
   margin-top: 20px;
 }
+  
+
     </style>
     <body style="background:#F2F4F8; font-family: arial;">
         <div class="main-container">
@@ -49,11 +51,10 @@
                         <a href="./index.html" ><img style="width:100%; height: 100%" src="img/logo.JPG" alt="" title=""/></a>
                 </div>
                 <div class='user-profile bordered'>
-                    <img src="./img/33.jpg">
+                    <img class="profile-image">
                 </div>
                 <div style="font-size: 12px;text-align: center; color: #817070;">
-                    <div><b>KIM</b></div>
-                    <b>12:30pm</b>
+                    <div class="username"></div>
                 </div>
                 <div class="admin-menu">
                     <a href='javascript:void()'><span class='active nav-list' name="users-nav"><div><img style="width: 22px; height:22px;" src="./img/svgs/checklist.svg" alt="checklist"></div> My subscription</span></a>
@@ -67,12 +68,10 @@
                 <div class='header-bar'>
                     <a href="#" id='navicon'><i class='fa fa-navicon fa-2x'></i></a> 
                     <span class="logout">
-                        Hello <small></small>Kim </small> &nbsp; | &nbsp; <a href='../../logout'><font color="#f66"><i class='fa fa-power-off'></i> Log-out</font></a>
+                        Hello <small class="username"></small> &nbsp; | &nbsp; <font color="#f66"><i class='fa fa-power-off'></i> Log-out</font>
                     </span>
                 </div>
                 
-                <!-- <div class='summary-stats' style="height:140px;"><div class='summary-stats bordered' style="border-color:#6f6;"></div></div> -->
-
             <!--- My subscription--->
             <div id="vacancies" class="display">
                 <div class="subscribtion">
@@ -83,7 +82,8 @@
                     <div class="contact-us">
                             <div class="contact-us-container">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <span>Contact support</span>
+                                    <a href="mailto:padimi@gmail.com" class="contact">Contact support</a>
+                                    <span></span>
                             </div>
                     </div>
                 </div>
@@ -186,7 +186,7 @@
                             <div><p>List of HMO plans we offer</p></div>
                         </div>
                         <div class="contact-us">
-                                <div class="contact-us-container plan-active">
+                                <div data-toggle="modal"  data-target="#hospitalModal" class="contact-us-container plan-active locations">
                                         <span>HMO locations</span>
                                 </div>
                         </div>
@@ -194,7 +194,7 @@
                     <hr>
                     <div class="container-fluid pt-x">
                             <div class="container">                        
-                                <div class="row mb-5 mt-5">
+                                <div class="row mx-3 my-5">
                                     <div class="card-deck">
                                         <div class="card text-center" style="width:20rem">
                                             <div class="card-body">
@@ -207,7 +207,7 @@
                                                 <div class="padLite-hmo-provision">
                                                     
                                                 </div>
-                                                <button class="btn btn-card ">Start with Padi Lite</button>
+                                                <button class="btn btn-card pay-padi" data-type="hmo" data-plan="padi_lite">Start with Padi Lite</button>
                                                 <hr>
                                                 <h6 class="txt1 mt-4" data-type="hmo" data-plan="padi_lite" data-toggle="modal"  data-target="#myModal">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
                                             </div>
@@ -223,12 +223,19 @@
                                                     
                                                   </div>
                                                 
-                                                <button class="btn btn-card ">Start with Padi Start</button>
+                                                <button class="btn btn-card pay-padi" data-type="hmo" data-plan="padi_start">Start with Padi Start</button>
                                                 <hr>
                                                 <h6 class="txt1 mt-4" data-type="hmo" data-plan="padi_start" data-toggle="modal"  data-target="#myModal">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
                                             </div>
                                         </div>
-                                        <div class="card text-center shadow-lg shadows" style="width:20rem">
+                                        
+                                        
+                                    
+                                    </div>
+                                </div>
+                                <div class="row mx-3 my-5">
+                                        <div class="card-deck">
+                                            <div class="card text-center shadow-lg shadows" style="width:20rem">
                                                 <div class="card-body">
                                                         <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Connect</h4>
                                                         
@@ -239,17 +246,11 @@
                                                         <div class="padConnect-hmo-provision">
                                                     
                                                           </div>
-                                                        <button class="btn btn-card ">Start with Padi Connect</button>
+                                                        <button class="btn btn-card pay-padi " data-type="hmo" data-plan="padi_connect">Start with Padi Connect</button>
                                                         <hr>
                                                         <h6 class="txt1 mt-4" data-type="hmo" data-plan="padi_connect" data-toggle="modal"  data-target="#myModal">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
                                                     </div>
                                         </div>
-                                        
-                                    
-                                    </div>
-                                </div>
-                                <div class="row mb-5 mt-5">
-                                        <div class="card-deck">
                                             <div class="card text-center" style="width:20rem">
                                                 <div class="card-body">
                                                     <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Premium</h4>
@@ -260,7 +261,7 @@
                                                     <div class="padPremium-hmo-provision">
                                                     
                                                       </div>
-                                                    <button class="btn btn-card ">Start with Padi Premium</button>
+                                                    <button class="btn btn-card pay-padi" data-type="hmo" data-plan="padi_premium">Start with Padi Premium</button>
                                                     <hr>
                                                     <h6 class="txt1 mt-4" data-type="hmo" data-plan="padi_premium" data-toggle="modal"  data-target="#myModal">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
                                                 </div>
@@ -291,7 +292,7 @@
                 <hr>
                 <div class="container-fluid pt-x">
                         <div class="container">                        
-                            <div class="row mb-5 mt-5">
+                            <div class="row mx-3 my-5">
                                 <div class="card-deck">
                                     <div class="card text-center" style="width:20rem">
                                         <div class="card-body">
@@ -304,7 +305,7 @@
                                             <div class="padLite-insurance-provision">
                                                 
                                             </div>
-                                            <button class="btn btn-card ">Start with Padi Lite</button>
+                                            <button class="btn btn-card pay-padi" data-type="insurance" data-plan="padi_lite">Start with Padi Lite</button>
                                             <hr>
                                             <h6 class="txt1 mt-4" data-type="insurance" data-plan="padi_lite" data-toggle="modal"  data-target="#myModal">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
                                         </div>
@@ -320,12 +321,16 @@
                                                 
                                               </div>
                                             
-                                            <button class="btn btn-card ">Start with Padi Start</button>
+                                            <button class="btn btn-card pay-padi" data-type="insurance" data-plan="padi_start">Start with Padi Start</button>
                                             <hr>
                                             <h6 class="txt1 mt-4" data-type="insurance" data-plan="padi_start" data-toggle="modal"  data-target="#myModal">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
                                         </div>
                                     </div>
-                                    <div class="card text-center shadow-lg shadows" style="width:20rem">
+                                </div>
+                            </div>
+                            <div class="row mx-3 my-5">
+                                    <div class="card-deck">
+                                        <div class="card text-center shadow-lg shadows" style="width:20rem">
                                             <div class="card-body">
                                                     <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Connect</h4>
                                                     
@@ -336,17 +341,11 @@
                                                     <div class="padConnect-insurance-provision">
                                                 
                                                       </div>
-                                                    <button class="btn btn-card ">Start with Padi Connect</button>
+                                                    <button class="btn btn-card pay-padi" data-type="insurance" data-plan="padi_connect">Start with Padi Connect</button>
                                                     <hr>
                                                     <h6 class="txt1 mt-4" data-type="insurance" data-plan="padi_connect" data-toggle="modal"  data-target="#myModal">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
                                                 </div>
                                     </div>
-                                    
-                                
-                                </div>
-                            </div>
-                            <div class="row mb-5 mt-5">
-                                    <div class="card-deck">
                                         <div class="card text-center" style="width:20rem">
                                             <div class="card-body">
                                                 <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Premium</h4>
@@ -357,7 +356,7 @@
                                                 <div class="padPremium-insurance-provision">
                                                 
                                                   </div>
-                                                <button class="btn btn-card ">Start with Padi Premium</button>
+                                                <button class="btn btn-card pay-padi" data-type="insurance" data-plan="padi_premium" >Start with Padi Premium</button>
                                                 <hr>
                                                 <h6 class="txt1 mt-4" data-type="insurance" data-plan="padi_premium" data-toggle="modal"  data-target="#myModal">View more details <i class="fa fa-arrow-right" aria-hidden="true"></i></h6>
                                             </div>
@@ -490,8 +489,51 @@
             </div>
           </div>
         </div>
+        <div class="modal fade" id="hospitalModal" role="dialog">
+            <div class="modal-dialog modal-lg">
+              <div class="modal-content">
+                <div class="modal-header" style="display: block">
+                  <button type="button" class="close" data-dismiss="modal">
+                    &times;
+                  </button>
+                  <h3 class="modal-title">Hospitals and Locations</h3>
+                </div>
+                <div class="modal-body view-hospital">
+
+                    <!-- <button class="accordion">Section 1</button>
+                    <div class="panel">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    
+                    <button class="accordion">Section 2</button>
+                    <div class="panel">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    
+                    <button class="accordion">Section 3</button>
+                    <div class="panel">
+                      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div> -->
+                </div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-default"
+                    data-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="texter">
+          <!-- <div hidden id="spinner"></div> -->
+        </div>
     </body>
 </html>
 
+<script src="https://js.paystack.co/v1/inline.js"></script>
 <script src="./js/plans.js"></script>
 <script src="./js/dashboard.js"></script>
+

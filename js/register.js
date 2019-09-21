@@ -70,6 +70,7 @@ signUPFormDOM.addEventListener("submit", async e => {
         timer: 2000
       });
       localStorage.setItem("token", JSON.stringify(res.data.token));
+      localStorage.setItem("info", JSON.stringify(res.data));
       window.location.href = "dashboard.html";
     } else {
       document.getElementById("register-form").style.visibility = "visible";

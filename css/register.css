@@ -73,6 +73,7 @@ h3 {
   width: 30%;
 }
 
+/* spinner */
 #spinner:not([hidden]) {
   position: fixed;
   top: 0;
