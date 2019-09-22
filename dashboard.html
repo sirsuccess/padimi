@@ -24,6 +24,7 @@
     
 
     </head>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
     <style>
         body{
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -50,9 +51,9 @@
                 <div style="background: white; padding:20px; box-sizing: border-box;" >
                         <a href="./index.html" ><img style="width:100%; height: 100%" src="img/logo.JPG" alt="" title=""/></a>
                 </div>
-                <!-- <div class='user-profile bordered'>
+                <div class='user-profile bordered'>
                     <img class="profile-image">
-                </div> -->
+                </div>
                 <div style="font-size: 12px;text-align: center; color: #817070;">
                     <div class="username"></div>
                 </div>
@@ -105,74 +106,13 @@
                   
                           <div class="row mb-5 justify-content-center">
                             <div class="col-md-7 text-center">
-                              <h2 class="section-title mb-2">3 Padi Items Acquired</h2>
+                              <!-- <h2 class="section-title mb-2">3 Padi Items Acquired</h2> -->
                             </div>
                           </div>
-                  
-                          <div class="mb-0" >
-                              <div   style="background:#fff;" class="row align-items-start job-item pb-5 mb-3 pt-5" id="border-bottom">
-                                <div class="col-md-2">
-                                  <a href="#"><img src="./img/insurance.PNG" alt="Image" class="img-fluid"></a>
-                                </div>
-                                <div class="col-md-4">
-                                  <span class="badge badge-success px-2 py-1 mb-3" style="font-size: 15px">Active</span>
-                                  <h2><a href="job-single.html">Padi Light</a> </h2>
-                                  <p class="meta">HMO: <strong>Novo</strong></p>
-                                </div>
-                                <div class="col-md-3 text-left">
-                                  <br>Location</br>
-                                  <p class="meta"><strong>Ikeja</strong></p>
-                                </div>
-                                <div class="col-md-3 text-md-right">
-                                  Amount<br/>
-                                  <strong class="text-black">&#8358;2500</strong>
-                                </div>
-                              </div>
-                            </div>
+                          <div class="products-sub">
 
-
-                            <div class="mb-0">
-                                    <div   style="background:#fff;" class="row align-items-start job-item pb-5 mb-3 pt-5" id="border-bottom">
-                                      <div class="col-md-2">
-                                        <a href="#"><img src="./img/insurance.PNG" alt="Image" class="img-fluid"></a>
-                                      </div>
-                                      <div class="col-md-4">
-                                        <span class="badge badge-success px-2 py-1 mb-3" style="font-size: 15px">Active</span>
-                                        <h2><a href="job-single.html">Padi Light</a> </h2>
-                                        <p class="meta">HMO: <strong>Novo</strong></p>
-                                      </div>
-                                      <div class="col-md-3 text-left">
-                                        <br>Location</br>
-                                        <p class="meta"><strong>Ikeja</strong></p>
-                                      </div>
-                                      <div class="col-md-3 text-md-right">
-                                        Amount<br/>
-                                        <strong class="text-black">&#8358;2500</strong>
-                                      </div>
-                                    </div>
-                                  </div>
-
-                                  <div class="mb-0">
-                                        <div   style="background:#fff;" class="row align-items-start job-item pb-5 mb-3 pt-5" id="border-bottom">
-                                          <div class="col-md-2">
-                                            <a href="#"><img src="./img/insurance.PNG" alt="Image" class="img-fluid"></a>
-                                          </div>
-                                          <div class="col-md-4">
-                                            <span class="badge badge-danger  px-2 py-1 mb-3" style="font-size: 15px">Inactive</span>
-                                            <h2><a href="job-single.html">Padi Light</a> </h2>
-                                            <p class="meta">HMO: <strong>Novo</strong></p>
-                                          </div>
-                                          <div class="col-md-3 text-left">
-                                            <br>Location</br>
-                                            <p class="meta"><strong>Ikeja</strong></p>
-                                          </div>
-                                          <div class="col-md-3 text-md-right">
-                                            Amount<br/>
-                                            <strong class="text-black">&#8358;2500</strong>
-                                          </div>
-                                        </div>
-                                      </div>
-                  
+                          </div>
+                          
                         </div>
                       </section>
             </div>
@@ -300,9 +240,9 @@
                                            
                     
                                             <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦2.5k<span style="font-size: 0.7rem">/month</span></h4>
+                                            <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 1.7rem; color: #04af76">One Service</h4>
                                             <hr>
-                                            
-                                            <div class="padLite-insurance-provision">
+                                            <div class="padLite-insurance-provision" style="margin-left: 39px">
                                                 
                                             </div>
                                             <button class="btn btn-card pay-padi" data-type="insurance" data-plan="padi_lite">Start with Padi Lite</button>
@@ -315,9 +255,11 @@
                                             <h4 class="works mt-3 card-title mb-0" style="font-weight: 20px; font-size: 2rem">Padi Start</h4>
                                                                  
                                             <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦3.5k<span style="font-size: 0.7rem">/month</span></h4>
+                                            <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 1.7rem; color: #04af76">Two Services</h4>
+
                                             <hr>
                                             
-                                            <div class="padStart-insurance-provision">
+                                            <div class="padStart-insurance-provision" style="margin-left: 39px">
                                                 
                                               </div>
                                             
@@ -336,9 +278,11 @@
                                                     
                             
                                                     <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦5k<span style="font-size: 0.7rem">/month</span></h4>
+                                                    <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 1.7rem; color: #04af76">Three Services</h4>
+
                                                     <hr>
                                                    
-                                                    <div class="padConnect-insurance-provision">
+                                                    <div class="padConnect-insurance-provision" style="margin-left: 39px">
                                                 
                                                       </div>
                                                     <button class="btn btn-card pay-padi" data-type="insurance" data-plan="padi_connect">Start with Padi Connect</button>
@@ -352,8 +296,10 @@
                                                 
                         
                                                 <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 2.7rem; color: #72738E">₦6.5k<span style="font-size: 0.7rem">/month</span></h4>
+                                            <h4 class="works1 mt-4 card-title mb-0" style="font-weight: 20px; font-size: 1.7rem; color: #04af76">Four Services</h4>
+
                                                 <hr>
-                                                <div class="padPremium-insurance-provision">
+                                                <div class="padPremium-insurance-provision" style="margin-left: 39px">
                                                 
                                                   </div>
                                                 <button class="btn btn-card pay-padi" data-type="insurance" data-plan="padi_premium" >Start with Padi Premium</button>
@@ -399,55 +345,74 @@
                       <div class="page-section">
                       <!-- grid row -->
                       <div class="row">
+
+                          <!-- grid column -->
+                          <div class="col-lg-4">
+                              <!-- .card -->
+                              <div class="card card-fluid">          
+                                <h6 class="card-header"> Your Details </h6>
+                                <!-- .nav -->
+                                <nav class="nav nav-tabs flex-column">
+                                  <a href="#" id="profileSetting" class="nav-link not-active active">Profile</a>
+                                  <a href="#" id="account" class="nav-link not-active ">Account</a>
+                                </nav>
+                                <!-- /.nav -->
+                              </div>
+                              <!-- /.card -->
+                            </div>
+                            <!-- /grid column -->
+                            <!-- grid column -->
                         
                         <!-- /grid column -->
                         <!-- grid column -->
                         <div class="col-lg-8 settings-details">
                           
-
-                                          <!-- .card -->
-                    <div class="card card-fluid">
-                        <h6 class="card-header"> Account </h6>
-                        <!-- .card-body -->
-                        <div class="card-body">
-                        <!-- form -->
-                        <form class="change_password">
-                        <!-- form row -->
-                        <div class="form-row">
-                        </div>
-                        <!-- /form row -->
-                        <!-- .form-group -->
-                        <div class="form-group">
-                        <label for="input03">Email</label>
-                        <input type="email" class="form-control" id="input03" value="bent10@looper.com" required=""> </div>
-                        <!-- /.form-group -->
-                        <!-- .form-group -->
-                        <div class="form-group">
-                        <label for="input04">New Password</label>
-                        <input type="password" class="form-control" id="input04" value="secret" required=""> </div>
-                        <!-- /.form-group -->
-                        <hr>
-                        <!-- .form-actions -->
-                        <div class="form-actions">
-                        <!-- enable submit btn when user type their current password -->
-                        <input type="password" class="form-control ml-auto mr-3" id="input06" placeholder="Enter Current Password" required="">
-                        <button type="submit" class="btn btn-primary mt-2" >Update Account</button>
-                        </div>
-                        <!-- /.form-actions -->
-                        </form>
-                        <!-- /form -->
-                        </div>
-                        <!-- /.card-body -->
-                           </div>
-                           <!-- /.card -->
-                                                          </div>
-                                                        </div>
+                          <div class="card card-fluid">
+                            <h6 class="card-header"> Public Profile </h6>
+                            <div hidden id="spinner"></div>
+                            <div class="card-body profile_img_body">
+                              <div class="media mb-3">
+                                <div class="user-avatar user-avatar-xl fileinput-button">
+                                  <div class="fileinput-button-label change-photo-img"> Change photo </div>
+                                  <img class="profile-image" > 
+                                  </div>
+                                  <div class="media-body pl-3 ml-5">
+                                    <h3 class="card-title"> Public avatar </h3>
+                                    <!-- <h6 class="card-subtitle text-muted"> Click the current avatar to change your photo. </h6> -->
+                                    <p class="card-text">
+                                      <small>JPG, GIF or PNG 400x400, &lt; 2 MB.</small>
+                                    </p>
+                                    <div id="progress-avatar" class="progress progress-xs fade">
+                                      <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <form class="profile_image-changer">
+                                  <div class="form-row">
+                                    <label for="input01" class="col-md-3">Profile image</label> 
+                                    <div class="col-md-9 mb-3">
+                                      <div class="custom-file">
+                                          <input type="file" enctype="multipart/form-data" id="fileupload-avatar" name="fileupload-avatar" >
                                       </div>
-                                  </div>                         
-                                  </section>
+                                    </div>
+                                  </div>
+                                  
+                                  <hr>
+                                  <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary ml-auto">Update Profile</button>
+                                  </div>
+                                </form>
                               </div>
-                              <!-- END of Settings -->
-                              </div>
+                          </div>
+                                   
+                        </div>
+                      </div>
+                   </div>
+               </div>                         
+               </section>
+           </div>
+           <!-- END of Settings -->
+           </div>
 
         </div>
         <div class="modal fade" id="myModal" role="dialog">
@@ -498,8 +463,9 @@
             </div>
         </div>
         <div class="texter">
-          <!-- <div hidden id="spinner"></div> -->
+          
         </div>
+        
     </body>
 </html>
 
