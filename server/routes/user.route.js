@@ -49,4 +49,6 @@ router.post(
   userController.buyPlan
 );
 
+router.get("/buy", verifyToken.validate, userController.getPlan);
+
 export default router;

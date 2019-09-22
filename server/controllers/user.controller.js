@@ -54,6 +54,7 @@ class UserController {
           first_name: result.first_name,
           last_name: result.last_name,
           email: result.email,
+          img: result.image,
           address: result.address,
           gender: result.gender,
           phone: result.phone,
@@ -105,6 +106,7 @@ class UserController {
           address: checkIfUserExist[0].address,
           gender: checkIfUserExist[0].gender,
           phone: checkIfUserExist[0].phone,
+          img: checkIfUserExist[0].image,
           state: checkIfUserExist[0].state,
           is_admin: checkIfUserExist[0].is_admin
         }
@@ -205,11 +207,33 @@ class UserController {
   static async buyPlan(req, res) {
     try {
       const buyOurPlan = await userService.buyOurPlan(req);
-      console.log(req.body);
       return res.status(201).json({
         status: 201,
         data: {
           buy: buyOurPlan[0]
+        }
+      });
+    } catch (error) {
+      if (error.message === "User not registered") {
+        return res.status(401).json({
+          status: 401,
+          error: error.message
+        });
+      }
+      return res.status(409).json({
+        status: 409,
+        error: error.message
+      });
+    }
+  }
+
+  static async getPlan(req, res) {
+    try {
+      const buyOurPlan = await userService.getYourPlans(req);
+      return res.status(201).json({
+        status: 201,
+        data: {
+          buy: buyOurPlan
         }
       });
     } catch (error) {

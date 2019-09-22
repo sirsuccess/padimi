@@ -103,7 +103,6 @@ class UserService {
     const { plan, type, amount, payment_reciept_id, location } = req.body;
     const datePaid = new Date();
     const endingDate = datePaid.setMonth(datePaid.getMonth() + 1);
-    console.log(req.body);
     const userId = req.userData.user;
     const sql =
       "INSERT INTO payments (plan, type, amount, payment_reciept_id, location, ending_date, user_id ) VALUES($1, $2, $3, $4, $5, $6, $7) RETURNING *";
@@ -116,6 +115,16 @@ class UserService {
       endingDate,
       userId
     ];
+    const client = await db.connect();
+    const result = await client.query(sql, bindParameters);
+    client.release();
+    return result.rows;
+  }
+
+  static async getYourPlans(req) {
+    const userId = req.userData.user;
+    const sql = "SELECT * FROM payments  WHERE user_id = $1";
+    const bindParameters = [userId];
     const client = await db.connect();
     const result = await client.query(sql, bindParameters);
     client.release();
