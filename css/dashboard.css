@@ -311,20 +311,20 @@ table th {
 }
 
 /* OVERLAY  */
-.texter {
-  /* display: flex;
+/* display: flex;
   justify-content: center;
   align-items: center; */
-  background-color: #f2f4f8;
-  opacity: 0.3;
+/* background-color: #f2f4f8; */
+.texter {
+  background-color: rgba(0, 0, 0, 0.59);
   z-index: 9999;
-  position: absolute;
+  position: fixed;
   top: 0px;
   left: 0px;
   right: 0px;
   bottom: 0px;
-  height: 100vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   color: white;
 }
 

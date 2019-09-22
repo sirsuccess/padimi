@@ -170,7 +170,7 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   if (padPremium && padConnect && padStart && padLite) {
     document.querySelector(".texter").style.display = "none";
-    // spinner.setAttribute("hidden", "");
+    spinner.setAttribute("hidden", "");
   }
   //   ADD ITEMS HMO / DISPLAY HMO FOR THE UI ////////////////////////////////////
 
@@ -457,7 +457,7 @@ const decideValue = (type, plan) => {
 function payWithPaystack(price) {
   let userEmail = JSON.parse(localStorage.getItem("info"));
   var handler = PaystackPop.setup({
-    key: "pk_test_fe5330c53cb0ba92c74e641d0570484000e5c46f",
+    key: "pk_live_756a99e117982ffa81126b57b9dd91089869eb59",
     email: userEmail.email,
     amount: price * 100,
     currency: "NGN",
