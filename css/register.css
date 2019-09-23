@@ -73,7 +73,21 @@ h3 {
   width: 30%;
 }
 
-/* spinner */
+/* OVERLAY  */
+.texter {
+  background-color: rgba(0, 0, 0, 0.59);
+  z-index: 9999;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  height: 100%;
+  width: 100%;
+  color: white;
+}
+
+/* SPINNER */
 #spinner:not([hidden]) {
   position: fixed;
   top: 0;
@@ -91,18 +105,25 @@ h3 {
   width: 80px;
   height: 80px;
   border: 2px solid #f3f3f3;
-  border-top: 3px solid #f25a41;
+  border-top: 3px solid #18d26e;
   border-radius: 100%;
   will-change: transform;
   z-index: 999;
   animation: spin 1s infinite linear;
 }
-
 @keyframes spin {
   from {
     transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
   }
 }

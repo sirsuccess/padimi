@@ -55,7 +55,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     subscription.innerHTML = `
       <div class="empty-container"> 
         <h1>You don't have any Padimi plan</h1>
-        <img src="./img/emptyState.PNG" class="empty-img">
+        <img src="./img/logo.JPG" class="empty-img">
       </div>
     `;
   } else {
@@ -166,11 +166,11 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   const padPremium = resPremium.data;
   padPremiumGlobal = padPremium;
-  // spinner.removeAttribute("hidden");
+  document.getElementById("spinner").removeAttribute("hidden");
 
   if (padPremium && padConnect && padStart && padLite) {
     document.querySelector(".texter").style.display = "none";
-    spinner.setAttribute("hidden", "");
+    document.getElementById("spinner").setAttribute("hidden", "");
   }
   //   ADD ITEMS HMO / DISPLAY HMO FOR THE UI ////////////////////////////////////
 

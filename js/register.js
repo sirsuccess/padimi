@@ -1,6 +1,7 @@
 const outputDOM = document.querySelector("#text");
 const signUPFormDOM = document.querySelector("#register-form");
 const spinner = document.getElementById("spinner");
+document.querySelector(".texter").style.display = "none";
 
 signUPFormDOM.addEventListener("submit", async e => {
   e.preventDefault();
@@ -40,6 +41,7 @@ signUPFormDOM.addEventListener("submit", async e => {
     });
   } else {
     spinner.removeAttribute("hidden");
+    document.querySelector(".texter").style.display = "block";
     document.getElementById("register-form").style.visibility = "hidden";
     const result = await fetch(
       "https://padimi.herokuapp.com/api/v1/auth/signup",
@@ -62,19 +64,20 @@ signUPFormDOM.addEventListener("submit", async e => {
     );
     const res = await result.json();
     if (res.status === 201) {
-      Swal.fire({
-        position: "center",
-        type: "success",
-        title: "Registration successful",
-        showConfirmButton: false,
-        timer: 2000
-      });
+      // Swal.fire({
+      //   position: "center",
+      //   type: "success",
+      //   title: "Registration successful",
+      //   showConfirmButton: false,
+      //   timer: 2000
+      // });
       localStorage.setItem("token", JSON.stringify(res.data.token));
       localStorage.setItem("info", JSON.stringify(res.data));
       window.location.href = "dashboard.html";
     } else {
       document.getElementById("register-form").style.visibility = "visible";
       spinner.setAttribute("hidden", "");
+      document.querySelector(".texter").style.display = "none";
 
       const failedText =
         res.error.first_name ||

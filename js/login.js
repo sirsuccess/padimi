@@ -1,5 +1,6 @@
 const loginFormDOM = document.querySelector("#login-form");
-const spinner = document.getElementById("spinner");
+// const spinner = document.getElementById("spinner");
+document.querySelector(".texter").style.display = "none";
 
 loginFormDOM.addEventListener("submit", async e => {
   e.preventDefault();
@@ -7,7 +8,8 @@ loginFormDOM.addEventListener("submit", async e => {
   const email = document.querySelector('input[name="email"]').value;
 
   spinner.removeAttribute("hidden");
-  document.getElementById("login-form").style.visibility = "hidden";
+  document.querySelector(".texter").style.display = "block";
+  document.getElementById("login-form").style.visibility = "block";
   const result = await fetch(
     "https://padimi.herokuapp.com/api/v1/auth/signin",
     {
@@ -35,7 +37,8 @@ loginFormDOM.addEventListener("submit", async e => {
     window.location.href = "dashboard.html";
   } else {
     document.getElementById("login-form").style.visibility = "visible";
-    spinner.setAttribute("hidden", "");
+    document.querySelector(".texter").style.display = "none";
+    document.getElementById("spinner").setAttribute("hidden", "");
 
     const failedText =
       res.error.first_name ||
