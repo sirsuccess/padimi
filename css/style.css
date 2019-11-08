@@ -3,6 +3,11 @@
   /* --firstBlue: #003E63; */
   /* --firstBlue: #44B6FD; */
 }
+.myClip{
+    clip-path: circle(50% at center);  
+  -webkit-clip-path: circle(50% at center);
+
+}
 
 
 /**************** extend css start ****************/
@@ -45,6 +50,7 @@ input:hover, input:focus, .form-control:focus {
 }
 .my_logo{
   max-width: 105px;
+  cursor: pointer;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
@@ -2636,28 +2642,37 @@ ul {
 /**************** banner part css start ****************/
 /* line 2, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_banner.scss */
 .banner_part {
-  position: relative;
-  /* top: 70px; */
-  /* background-image: url(../img/banner_bg.png); */
+  background-size: 100% 100%;
+  background-image: url(../img/background1.PNG);
   background-repeat: no-repeat;
-  background-size: 65% 100%;
-  background-position: left top;
 }
 
-@media (max-width: 991px) {
-  /* line 2, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_banner.scss */
-  .banner_part {
+/* .logoss {
+  background-size: 100% 100%;
+  background-image: url(../img/background3.PNG);
+  background-repeat: no-repeat;
+} */
+.howItWorks{
+  background-size: 100% 100%;
+  background-image: url(../img/background5.PNG);
+  background-repeat: no-repeat;
+  padding-bottom: 20px;
+}
+
+
+@media only screen and (max-width: 992px){
+  #carouselExampleSlidesOnly{
+    width: 70%;
+  }
+  
+  .banner_part, .howItWorks {
     background-image: none;
-    top: 70px;
+    background: #57B4EC;
+    padding-top: 100px;
   }
 }
 
-@media only screen and (min-width: 992px) and (max-width: 1200px) {
-  /* line 2, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_banner.scss */
-  .banner_part {
-    background-image: none;
-  }
-}
+
 
 /* line 16, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_banner.scss */
 .banner_part .banner_text {
@@ -2690,6 +2705,7 @@ ul {
   font-weight: 700;
   margin-bottom: 40px;
   line-height: 70px;
+  color: white;
 }
 
 @media (max-width: 576px) {
@@ -2738,6 +2754,7 @@ ul {
   font-family: "Rajdhani", sans-serif;
   margin-bottom: 42px;
   padding-right: 110px;
+  color: white;
 }
 
 @media (max-width: 991px) {
@@ -3282,12 +3299,26 @@ ul {
   position: relative;
   z-index: 99;
 }
+.topic{
+  display: flex;
+  justify-content: center;
+  padding: 30px 0px 60px 0px;
+
+}
+.laptop_Container{
+  padding-bottom: 70px;
+  display: flex;
+  justify-content: center;
+}
+.laptop_Container img{
+  width: 750px;
+}
 
 @media (max-width: 991px) {
   /* line 2, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_use_sasu.scss */
   .use_sasu {
     /* padding: 70px 0 30px; */
-    margin-top: 90px;
+    margin-top: 10px;
   }
 }
 
@@ -3338,6 +3369,7 @@ ul {
   font-weight: 600;
   font-size: 20px;
   margin-bottom: 22px;
+  /* color: white; */
 }
 
 @media (max-width: 576px) {
@@ -3363,7 +3395,7 @@ ul {
 
 /* line 72, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_use_sasu.scss */
 .use_sasu .single_feature_part p {
-  color: #7f7f7f;
+  color: black;
   line-height: 1.8;
   font-size: 15px;
 }
@@ -3798,14 +3830,18 @@ ul {
 
 /**********************footer part css*******************/
 /* line 2, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
-.footer_part {
+/* .footer_part {
   background-image: url("../img/footer_bg.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 130px 0px 25px;
+} */
+.footer_part {
+  background-size: 100% 100%;
+  background-image: url(../img/background2.PNG);
+  background-repeat: no-repeat;
 }
-
 @media (max-width: 991px) {
   /* line 2, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
   .footer_part {
@@ -5861,37 +5897,34 @@ h1, h2, h3, h4, h5, h6 {
 
 /**********************footer part css*******************/
 /* line 2, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
-.footer_part {
-  background-image: url("../img/footer_bg.png");
+/* .footer_part {
+  background-image: url("../img/background3.PNG");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   padding: 130px 0px 25px;
+} */
+.footer_part {
+  padding: 120px 0px 20px 0px;
+  background-size: 100% 100%;
+  background-image: url(../img/background2.PNG);
+  background-repeat: no-repeat;
 }
 
 @media (max-width: 991px) {
-  /* line 2, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
   .footer_part {
     padding: 70px 0px 25px;
     background-image: url("none");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-color: #f7f7f7;
+    background: #57B4EC;
   }
 }
 
-/* line 16, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
-.footer_part img {
-  margin-bottom: 35px;
-}
 
-@media (max-width: 576px) {
-  /* line 20, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
-  .footer_part .single_footer_part {
-    margin-bottom: 20px;
-  }
-}
+
+
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /* line 20, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
@@ -5912,6 +5945,10 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 20px;
   margin-bottom: 30px;
   font-weight: 500;
+  color: white;
+}
+.list-unstyled li a{
+  color: white;
 }
 
 @media (max-width: 576px) {
@@ -5938,11 +5975,12 @@ h1, h2, h3, h4, h5, h6 {
 /* line 59, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
 .footer_part .single_footer_part p {
   margin-bottom: 10px;
+  color: white;
 }
 
 /* line 65, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
 .footer_part .single_footer_part .list-unstyled li a {
-  color: #888888;
+  color: white;
   margin-bottom: 10px;
   display: inline-block;
 }
@@ -6023,7 +6061,7 @@ h1, h2, h3, h4, h5, h6 {
 /* line 141, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_footer.scss */
 .footer_part .footer_icon li a {
   font-size: 14px;
-  color: #888888;
+  color: white;
   margin-left: 30px;
   -webkit-transition: 0.5s;
   transition: 0.5s;

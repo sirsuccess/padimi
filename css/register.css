@@ -156,3 +156,9 @@ h3 {
   width: 130px;
   margin-top: 40px;
 }
+
+@media screen and (max-width: 496px) {  
+  .banner_part{
+      top: 0px
+  }
+}

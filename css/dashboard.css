@@ -32,7 +32,7 @@ body {
 }
 a {
   text-decoration: none;
-  color: green;
+  color: #0C73B8;
 }
 a:hover {
   text-decoration: none;
@@ -202,10 +202,10 @@ table th {
 }
 .plan-active {
   color: white;
-  background: #04af76;
+  background: #0C73B8;
 }
 
-/* CARDS */
+/* CARDS 04af76  44B6FD */
 /* .card-title {
   font-size: 2rem;
 } */
