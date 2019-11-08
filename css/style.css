@@ -52,6 +52,22 @@ input:hover, input:focus, .form-control:focus {
   max-width: 105px;
   cursor: pointer;
 }
+.tandC{
+  max-height: 80vh;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.tandC::-webkit-scrollbar {
+    width: 6px;
+    background-color: #F5F5F5;
+}
+.tandC::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.175);
+}
+.tandC::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    background-color: #F5F5F5;
+}
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   /* line 21, ../../01 cl html template/03_jun 2019/185 Ecobit SAAS html/sass/_common.scss */
