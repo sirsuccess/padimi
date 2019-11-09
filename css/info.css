@@ -1,6 +1,6 @@
 .kyc_proccess{
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     margin: 15px;
     flex-flow: row wrap;
 
@@ -161,17 +161,73 @@
     width: 130px;
     margin: 25px 0px;
   }
-  
+  .hideme{
+    display: none;
+  }
   .info_details{
     padding: 20px;
   }
+  .info_details_account{
+    padding: 20px;
 
-  .info_details form{
+  }
+  .info_details_account form{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  .info_details_account form input[type=text], [type=number]{
+    width: 70%;
+    height: 50px;
+    background: #F5F7FB;
+    border: 2px solid #F5F7FB;
+    margin: 10px 0px;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+  
+
+  label {
+  display: inline-block;
+  padding: 0 1em;
+  text-align: right;
+}
 
 
+[type=file] {
+    position: absolute;
+    filter: alpha(opacity=0);
+    opacity: 0;
+}
+input,
+[type=file] + label {
+  border: 1px solid #CCC;
+  border-radius: 3px;
+  text-align: left;
+  padding: 10px;
+  width: 70%;
+  margin: 0;
+}
+[type=file] + label {
+  text-align: center;
+  background: #F5F7FB;
+  color: rgb(59, 58, 58);
+  border: none;
+  cursor: pointer;
+}
+input[type=submit] {
+  background: #3399ff;
+  text-align: center;
+  color: white;
+  font-size: 18px;
+  margin: 15px 0px;
+}
 
   /* ///////////////////////////////////////////////////////////////////////////////////// */
 
@@ -275,53 +331,6 @@ height: 50px;
 ///////////////////////
 
 */
-
-
-.lds-hourglass {
-  display: inline-block;
-  position: relative;
-  width: 64px;
-  height: 64px;
-}
-.lds-hourglass:after {
-  content: " ";
-  display: block;
-  border-radius: 50%;
-  width: 0;
-  height: 0;
-  margin: 6px;
-  box-sizing: border-box;
-  border: 26px solid #dfc;
-  border-color: #dfc transparent #dfc transparent;
-  animation: lds-hourglass 1.2s infinite;
-}
-@keyframes lds-hourglass {
-  0% {
-    transform: rotate(0);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  50% {
-    transform: rotate(900deg);
-    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-  }
-  100% {
-    transform: rotate(1800deg);
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 .loader {

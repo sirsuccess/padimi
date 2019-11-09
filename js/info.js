@@ -30,3 +30,61 @@ $("#fileup").change(function() {
     $("#fakebtn").hide();
   }
 });
+
+
+///////////////////////////////////////////// bvm
+
+$(".f1").on("change", function() {
+  // Name of file and placeholder
+   
+    var file = this.files[0].name;
+     
+    var dflt = $(this).attr("placeholder");
+    
+  if ($(this).val() != "") {
+    $(this)
+      .next()
+      .text(file);
+  } else {
+    $(this)
+      .next()
+      .text(dflt);
+  }
+});
+
+$(".ff").on("change", function() {
+  // Name of file and placeholder
+    var file = this.files[0].name;
+  var dflt = $(this).attr("placeholder");
+  if ($(this).val() != "") {
+    $(this)
+      .next()
+      .text(file);
+  } else {
+    $(this)
+      .next()
+      .text(dflt);
+  }
+});
+
+const imageCard = document.querySelector(".imageCard");
+const accountCard = document.querySelector(".accountCard");
+const info_details = document.querySelector(".info_details");
+const info_details_account = document.querySelector(".info_details_account");
+
+
+accountCard.addEventListener("click", () => {
+    accountCard.classList.add("active");
+    imageCard.classList.remove("active");
+    info_details.classList.add("hideme");
+    info_details_account.classList.remove("hideme");
+})
+
+imageCard.addEventListener("click", () => {
+  accountCard.classList.remove("active");
+    imageCard.classList.add("active");
+    
+    info_details_account.classList.add("hideme");
+    info_details.classList.remove("hideme");
+    
+});
